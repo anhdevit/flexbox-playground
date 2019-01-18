@@ -7,6 +7,7 @@
  */
 
 import React, { Component } from 'react';
+import { SafeAreaView } from 'react-navigation';
 import { Platform, StyleSheet, Text, View } from 'react-native';
 import Action from './Action';
 import EditorTabbar from '../../router/EditorTabbar';
@@ -14,7 +15,7 @@ import EditorButton from './EditorButton'
 export default class Tab extends Component {
   render() {
     return (
-      <View style={styles.container}>
+      <SafeAreaView style={styles.container}>
         <Action />
         <EditorTabbar 
           style={{
@@ -23,7 +24,7 @@ export default class Tab extends Component {
           }}
         />
         <EditorButton />
-      </View>
+      </SafeAreaView>
     );
   }
 }

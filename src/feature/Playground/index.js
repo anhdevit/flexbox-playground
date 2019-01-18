@@ -7,17 +7,10 @@
  */
 
 import React, { Component } from 'react';
+import { SafeAreaView } from 'react-navigation';
 import { Platform, StyleSheet, Text, View, Button } from 'react-native';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-
-type Props = {};
-export default class Playground extends Component<Props> {
+export default class Playground extends Component {
   static navigationOptions = ({ navigation }) => ({
     drawerLabel: 'Playground',
     headerTitle: 'Playground',
@@ -37,9 +30,9 @@ export default class Playground extends Component<Props> {
 
   render() {
     return (
-      <View style={styles.container}>
+      <SafeAreaView style={styles.container}>
         <Text style={styles.welcome}>root</Text>
-      </View>
+      </SafeAreaView>
     );
   }
 }
