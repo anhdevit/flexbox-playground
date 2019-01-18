@@ -20,7 +20,7 @@ export default class EditorButton extends Component {
     return (
       <View style={styles.container}>
         <CustomButton
-          title='Get Code'
+          title='add child node'
           styleCustom={
             {
               flex: 1
@@ -28,7 +28,7 @@ export default class EditorButton extends Component {
           }
         />
         <CustomButton
-          title='Share URL'
+          title='remove node'
           styleCustom={
             {
               flex: 1,
