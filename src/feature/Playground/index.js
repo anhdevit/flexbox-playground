@@ -8,22 +8,31 @@
 
 import React, { Component } from 'react';
 import { SafeAreaView } from 'react-navigation';
-import { Platform, StyleSheet, Text, View, Button } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  TouchableOpacity
+} from 'react-native';
+import colors from '../../common/theme/colors';
+import Menu from '../../common/components/buttons/Menu';
+import Editor from '../../common/components/buttons/Editor';
+import HeaderTitle from '../../common/components/texts/HeaderTitle';
 
 export default class Playground extends Component {
   static navigationOptions = ({ navigation }) => ({
-    drawerLabel: 'Playground',
-    headerTitle: 'Playground',
+    headerTitle: (
+      <HeaderTitle 
+        title='Playground'
+      />
+    ),
     headerLeft: (
-      <Button
-        onPress={() => navigation.openDrawer()}
-        title="Menu"
+      <Menu
+        navigation={navigation}
       />
     ),
     headerRight: (
-      <Button
-        onPress={() => navigation.navigate('Tab')}
-        title="Editor"
+      <Editor
+        navigation={navigation}
       />
     )
   });
@@ -31,7 +40,11 @@ export default class Playground extends Component {
   render() {
     return (
       <SafeAreaView style={styles.container}>
-        <Text style={styles.welcome}>root</Text>
+        <TouchableOpacity
+          style={styles.rootView}
+        >
+          <Text>root</Text>
+        </TouchableOpacity>
       </SafeAreaView>
     );
   }
@@ -40,13 +53,18 @@ export default class Playground extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: colors.background,
+  },
+  rootView: {
+    flex: 1,
+    margin: 10,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    borderWidth: 2,
+    borderColor: colors.primary,
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+  icon: {
+    width: 24,
+    height: 24,
   },
 });

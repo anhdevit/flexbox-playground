@@ -6,22 +6,41 @@
  * @flow
  */
 
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import React, { Component } from 'react';
+import { Platform, StyleSheet, Text, View } from 'react-native';
+import colors from '../../../../common/theme/colors';
+import ElementDropdown from '../../../../common/components/element-editor/ElementDropdown';
+import ElementChoose from '../../../../common/components/element-editor/ElementChoose';
+import ElementInput from '../../../../common/components/element-editor/ElementInput';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-
-type Props = {};
-export default class Flex extends Component<Props> {
+export default class Flex extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Flex</Text>
+        <ElementChoose
+          title='FLEX DIRECTION'
+          data={['inherit', 'ltr', 'rtl']}
+        />
+        {/* <ElementDropdown
+          title='FLEX DIRECTION'
+        /> */}
+        {/* <View
+          style={styles.viewRow}
+        >
+          <ElementInput
+            title='BASIS'
+          />
+          <ElementInput
+            title='GROW'
+          />
+          <ElementInput
+            title='SHRINK'
+          />
+        </View>
+        <ElementChoose
+          title='FLEX WRAP'
+          data={['no wrap', 'wrap', 'wrap reverse']}
+        /> */}
       </View>
     );
   }
@@ -30,18 +49,11 @@ export default class Flex extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: colors.background,
+    paddingHorizontal: 20,
+    paddingVertical: 30,
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+  viewRow: {
+    flexDirection: 'row'
+  }
 });
