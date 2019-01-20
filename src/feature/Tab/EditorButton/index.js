@@ -13,28 +13,31 @@ import {
   View,
   TouchableOpacity
 } from 'react-native';
-import CustomButton from '../../../common/components/buttons/CustomButton';
+import ImageButton from '../../../common/components/buttons/ImageButton';
 
 export default class EditorButton extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <CustomButton
+        <ImageButton
           title='add child node'
+          imageRight={require('../../../resources/assets/common/ic_add_circle_outline.png')}
           styleCustom={
             {
               flex: 1
             }
           }
         />
-        <CustomButton
+        <ImageButton
           title='remove node'
+          imageRight={require('../../../resources/assets/common/ic_remove_circle_outline.png')}
           styleCustom={
             {
               flex: 1,
               marginLeft: 15,
             }
           }
+          disable
         />
       </View>
     );

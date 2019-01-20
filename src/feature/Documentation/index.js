@@ -15,15 +15,20 @@ import {
   Button
 } from 'react-native';
 import { SafeAreaView } from 'react-navigation';
+import Menu from '../../common/components/buttons/Menu';
+import colors from '../../common/theme/colors';
+import HeaderTitle from '../../common/components/texts/HeaderTitle';
 
 export default class App extends Component {
   static navigationOptions = ({ navigation }) => ({
-    drawerLabel: 'Documentation',
-    headerTitle: 'Documentation',
+    headerTitle: (
+      <HeaderTitle 
+        title='Documentation'
+      />
+    ),
     headerLeft: (
-      <Button
-        onPress={() => navigation.openDrawer()}
-        title="Menu"
+      <Menu 
+        navigation={navigation}
       />
     )
   });
@@ -31,7 +36,7 @@ export default class App extends Component {
   render() {
     return (
       <SafeAreaView style={styles.container}>
-        <Text style={styles.welcome}>Documentation</Text>
+        <Text>Documentation</Text>
       </SafeAreaView>
     );
   }
@@ -42,6 +47,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: colors.background,
   },
 });

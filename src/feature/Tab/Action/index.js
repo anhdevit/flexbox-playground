@@ -13,22 +13,25 @@ import {
   View,
   TouchableOpacity
 } from 'react-native';
-import CustomButton from '../../../common/components/buttons/CustomButton';
+import ImageButton from '../../../common/components/buttons/ImageButton';
+import DropdownButton from '../../../common/components/buttons/DropdownButton';
 
 export default class Action extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <CustomButton
+        <DropdownButton
           title='Get Code'
+          imageRight={require('../../../resources/assets/common/ic_arrow_drop_down.png')}
           styleCustom={
             {
               flex: 1
             }
           }
         />
-        <CustomButton
+        <ImageButton
           title='Share URL'
+          imageRight={require('../../../resources/assets/common/ic_share.png')}
           styleCustom={
             {
               flex: 1,
