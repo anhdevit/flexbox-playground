@@ -6,6 +6,7 @@ import {
     StyleSheet
 } from 'react-native';
 import colors from '../../../common/theme/colors';
+import styleCommon from '../../../common/theme/styles';
 
 class DropdownButton extends Component {
     constructor(props) {
@@ -17,24 +18,22 @@ class DropdownButton extends Component {
     render() {
         const {
             onPress,
-            imageRight,
             title,
             styleCustom,
         } = this.props;
 
         return (
             <TouchableOpacity
-                style={[styles.button, styleCustom]}
+                style={[styles.button, styleCustom, styleCommon.heightElement]}
                 onPress={onPress}
             >
                 <Text
                     style={styles.text}
                 >{title}</Text>
                 {
-                    imageRight && <Image
+                    <Image
                         style={styles.image}
-
-                        source={imageRight}
+                        source={require('../../../resources/assets/common/ic_arrow_drop_down.png')}
                     />
                 }
             </TouchableOpacity>

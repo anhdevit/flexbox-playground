@@ -12,35 +12,44 @@ import colors from '../../../../common/theme/colors';
 import ElementDropdown from '../../../../common/components/element-editor/ElementDropdown';
 import ElementChoose from '../../../../common/components/element-editor/ElementChoose';
 import ElementInput from '../../../../common/components/element-editor/ElementInput';
+import stylesCommon from '../../../../common/theme/styles';
+
 
 export default class Flex extends Component {
   render() {
     return (
       <View style={styles.container}>
         <ElementChoose
-          title='FLEX DIRECTION'
+          title='DIRECTION'
           data={['inherit', 'ltr', 'rtl']}
         />
-        {/* <ElementDropdown
+
+        <ElementDropdown
           title='FLEX DIRECTION'
-        /> */}
-        {/* <View
+          value='row'
+          style={[stylesCommon.elementEditor]}
+        />
+        <View
           style={styles.viewRow}
         >
           <ElementInput
             title='BASIS'
+            style={{flex: 1}}
           />
           <ElementInput
             title='GROW'
+            style={{flex: 1}}
           />
           <ElementInput
             title='SHRINK'
+            style={{flex: 1}}
           />
         </View>
         <ElementChoose
           title='FLEX WRAP'
-          data={['no wrap', 'wrap', 'wrap reverse']}
-        /> */}
+          data={['no wrap', 'wrap', 'shrink']}
+          style={[stylesCommon.elementEditor]}
+        />
       </View>
     );
   }
@@ -54,6 +63,7 @@ const styles = StyleSheet.create({
     paddingVertical: 30,
   },
   viewRow: {
-    flexDirection: 'row'
-  }
+    flexDirection: 'row',
+    marginTop: 20,
+  },
 });

@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import colors from '../../../common/theme/colors';
 import TitleElement from '../texts/TitleElement';
+import DropdownButton from '../buttons/DropdownButton';
 
 class ElementDropdown extends Component {
     constructor(props) {
@@ -19,12 +20,22 @@ class ElementDropdown extends Component {
     render() {
         const {
             title,
+            value,
+            style
         } = this.props;
 
         return (
-            <View>
+            <View
+                style={style}
+            >
                 <TitleElement
                     title={title}
+                />
+                <DropdownButton 
+                    title={value}
+                    styleCustom={{
+                        marginTop: 10,
+                    }}
                 />
             </View>
         );

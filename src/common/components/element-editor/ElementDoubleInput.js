@@ -11,7 +11,7 @@ import colors from '../../../common/theme/colors';
 import TitleElement from '../texts/TitleElement';
 import styleCommon from '../../../common/theme/styles';
 
-class ElementInput extends Component {
+class ElementDoubleInput extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -31,16 +31,23 @@ class ElementInput extends Component {
                 <TitleElement
                     title={title}
                 />
-                <TextInput 
-                    placeholder='abc'
-                    style={[styles.textInput, styleCommon.heightElement]}
-                />
+                <View
+                    style={styles.viewInput}
+                >
+                    <TextInput
+                        style={[styles.textInput, styleCommon.heightElement]}
+                    />
+                    <TextInput
+                        style={[styles.textInput, styleCommon.heightElement]}
+                    />
+                </View>
+
             </View>
         );
     }
 }
 
-export default ElementInput;
+export default ElementDoubleInput;
 
 const styles = StyleSheet.create({
     text: {
@@ -48,13 +55,17 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: '500',
     },
+    viewInput: {
+        flexDirection: 'row',
+    },
     textInput: {
-        borderColor:'gray',
+        borderColor: 'gray',
         borderWidth: 1,
         marginRight: 10,
         borderRadius: 5,
         height: 30,
         paddingLeft: 10,
-        marginTop: 10
+        marginTop: 10,
+        flex: 1
     }
 })

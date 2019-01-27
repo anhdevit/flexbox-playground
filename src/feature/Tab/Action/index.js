@@ -22,7 +22,6 @@ export default class Action extends Component {
       <View style={styles.container}>
         <DropdownButton
           title='Get Code'
-          imageRight={require('../../../resources/assets/common/ic_arrow_drop_down.png')}
           styleCustom={
             {
               flex: 1
