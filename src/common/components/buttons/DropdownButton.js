@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
-import {
-    Text,
-    TouchableOpacity,
-    Image,
-    StyleSheet
-} from 'react-native';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import colors from '../../../common/theme/colors';
+import styleCommon from '../../../common/theme/styles';
+import ModalDropdown from 'react-native-modal-dropdown';
 
 class DropdownButton extends Component {
     constructor(props) {
@@ -17,27 +14,33 @@ class DropdownButton extends Component {
     render() {
         const {
             onPress,
-            imageRight,
             title,
+            option,
             styleCustom,
         } = this.props;
 
         return (
-            <TouchableOpacity
-                style={[styles.button, styleCustom]}
+            <ModalDropdown
+                options={option}
+                dropdownStyle={styles.styleDropdown}
+                dropdownTextStyle={styles.textStyleDropDown}
                 onPress={onPress}
             >
-                <Text
-                    style={styles.text}
-                >{title}</Text>
-                {
-                    imageRight && <Image
-                        style={styles.image}
-
-                        source={imageRight}
-                    />
-                }
-            </TouchableOpacity>
+                <View
+                    style={[styles.button, styleCustom, styleCommon.heightElement]}
+                    onPress={onPress}
+                >
+                    <Text
+                        style={styles.text}
+                    >{title}</Text>
+                    {
+                        <Image
+                            style={styles.image}
+                            source={require('../../../resources/assets/common/ic_arrow_drop_down.png')}
+                        />
+                    }
+                </View>
+            </ModalDropdown>
         );
     }
 }
@@ -45,10 +48,13 @@ class DropdownButton extends Component {
 export default DropdownButton;
 
 const styles = StyleSheet.create({
+    styleDropdown: {
+        width: '90%',
+    },
     button: {
         paddingHorizontal: 20,
         borderRadius: 5,
-        justifyContent: 'center',
+        justifyContent: 'space-between',
         flexDirection: 'row',
         alignItems: 'center',
         borderColor: colors.border,
@@ -56,8 +62,7 @@ const styles = StyleSheet.create({
     },
     text: {
         alignSelf: 'center',
-        flex: 1,
-        color: colors.surface
+        color: colors.surface,
     },
     image: {
         tintColor: colors.surface

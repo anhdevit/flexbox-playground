@@ -45,11 +45,13 @@ class ElementChoose extends Component {
     render() {
         const {
             title,
-            data
+            data,
+            style
         } = this.props;
 
         return (
             <View
+                style={style}
             >
                 <TitleElement
                     title={title}

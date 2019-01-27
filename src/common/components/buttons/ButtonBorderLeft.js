@@ -6,6 +6,7 @@ import {
     StyleSheet
 } from 'react-native';
 import colors from '../../../common/theme/colors';
+import styleCommon from '../../../common/theme/styles';
 
 class ButtonBorderLeft extends Component {
     constructor(props) {
@@ -21,7 +22,7 @@ class ButtonBorderLeft extends Component {
         } = this.props;
         return (
             <TouchableOpacity
-                style={styles.button}
+                style={[styles.button, styleCommon.heightElement]}
                 onPress={onPress}
             >
                 <Text
