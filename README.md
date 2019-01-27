@@ -12,3 +12,7 @@
 |   |   |   |
 |---|---|---|
 |<img alt="menu" src="images/step2/menu.png" width="320">| <img alt="playground" src="images/step2/playground.png" width="320">| <img alt="tab-screen" src="images/step2/editor.png" width="320">|
+
+|   |   |   |
+|---|---|---|
+|<img alt="menu" src="images/step2/flex.png" width="320">| <img alt="playground" src="images/step2/alignment.png" width="320">| <img alt="tab-screen" src="images/step2/layout.png" width="320">|
