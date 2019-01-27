@@ -33,7 +33,7 @@ export default class Layout extends Component {
       positionType
     } = layout
     return (
-      <ScrollView style={styles.container}>
+      <ScrollView style={stylesCommon.viewEditor}>
         <ElementDoubleInput
           title={`${width.title} x ${height.title}`}
           defaultValueLeft={width.defaultValue.toString()}
@@ -104,6 +104,5 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.background,
     paddingHorizontal: 20,
-    paddingVertical: 30,
   },
 });

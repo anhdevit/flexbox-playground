@@ -7,17 +7,12 @@
  */
 
 import React, { Component } from 'react';
+import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-navigation';
-import {
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View
-} from 'react-native';
-import colors from '../../common/theme/colors';
-import Menu from '../../common/components/buttons/Menu';
 import Editor from '../../common/components/buttons/Editor';
+import Menu from '../../common/components/buttons/Menu';
 import HeaderTitle from '../../common/components/texts/HeaderTitle';
+import colors from '../../common/theme/colors';
 
 export default class Playground extends Component {
   static navigationOptions = ({ navigation }) => ({

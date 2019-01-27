@@ -6,5 +6,10 @@ export default StyleSheet.create({
     },
     heightElement: {
         height: 40
+    },
+    viewEditor: {
+        flex: 1,
+        backgroundColor: colors.background,
+        paddingHorizontal: 20,
     }
 });

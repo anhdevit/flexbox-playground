@@ -21,6 +21,7 @@ class ElementDropdown extends Component {
         const {
             title,
             value,
+            option,
             style
         } = this.props;
 
@@ -33,6 +34,7 @@ class ElementDropdown extends Component {
                 />
                 <DropdownButton 
                     title={value}
+                    option={option}
                     styleCustom={{
                         marginTop: 10,
                     }}
