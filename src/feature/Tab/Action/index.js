@@ -22,11 +22,7 @@ export default class Action extends Component {
       <View style={styles.container}>
         <DropdownButton
           title='Get Code'
-          styleCustom={
-            {
-              flex: 1
-            }
-          }
+          option={['a', 'b', 'c']}
         />
         <ImageButton
           title='Share URL'

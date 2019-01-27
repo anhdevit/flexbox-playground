@@ -49,12 +49,12 @@ export default DropdownButton;
 
 const styles = StyleSheet.create({
     styleDropdown: {
-        // width: '90%',
+        width: '90%',
     },
     button: {
         paddingHorizontal: 20,
         borderRadius: 5,
-        justifyContent: 'center',
+        justifyContent: 'space-between',
         flexDirection: 'row',
         alignItems: 'center',
         borderColor: colors.border,
@@ -62,8 +62,7 @@ const styles = StyleSheet.create({
     },
     text: {
         alignSelf: 'center',
-        flex: 1,
-        color: colors.surface
+        color: colors.surface,
     },
     image: {
         tintColor: colors.surface
