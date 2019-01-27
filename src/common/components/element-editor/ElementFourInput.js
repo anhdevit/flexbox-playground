@@ -21,6 +21,10 @@ class ElementFourInput extends Component {
     render() {
         const {
             title,
+            defaultValueLeft,
+            defaultValueTop,
+            defaultValueRight,
+            defaultValueBottom,
             style
         } = this.props;
 
@@ -29,6 +33,7 @@ class ElementFourInput extends Component {
                 style={[styles.viewElement, style]}
             >
                 <TextInput
+                    defaultValue={defaultValueTop}
                     style={[styles.textInput, styleCommon.heightElement]}
                 />
                 <View
@@ -36,16 +41,19 @@ class ElementFourInput extends Component {
                 >
 
                     <TextInput
+                        defaultValue={defaultValueLeft}
                         style={[styles.textInput, styleCommon.heightElement]}
                     />
                     <Text
                         style={styles.textCenter}
                     >{title}</Text>
                     <TextInput
+                        defaultValue={defaultValueRight}
                         style={[styles.textInput, styleCommon.heightElement]}
                     />
                 </View>
                 <TextInput
+                    defaultValue={defaultValueBottom}
                     style={[styles.textInput, styleCommon.heightElement]}
                 />
             </View>

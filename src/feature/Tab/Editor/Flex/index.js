@@ -7,25 +7,27 @@
  */
 
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
-import colors from '../../../../common/theme/colors';
-import ElementDropdown from '../../../../common/components/element-editor/ElementDropdown';
+import { StyleSheet, View } from 'react-native';
 import ElementChoose from '../../../../common/components/element-editor/ElementChoose';
+import ElementDropdown from '../../../../common/components/element-editor/ElementDropdown';
 import ElementInput from '../../../../common/components/element-editor/ElementInput';
+import { flex } from '../../../../common/constants/flex-box';
+import colors from '../../../../common/theme/colors';
 import stylesCommon from '../../../../common/theme/styles';
 
 
 export default class Flex extends Component {
   render() {
+    const { direction, flexDirection, basis, grow, shrink, flexWrap } = flex;
     return (
       <View style={styles.container}>
         <ElementChoose
-          title='DIRECTION'
-          data={['inherit', 'ltr', 'rtl']}
+          title={direction.title}
+          data={direction.value}
         />
 
         <ElementDropdown
-          title='FLEX DIRECTION'
+          title={flexDirection.title}
           value='row'
           style={[stylesCommon.elementEditor]}
         />
@@ -33,21 +35,24 @@ export default class Flex extends Component {
           style={styles.viewRow}
         >
           <ElementInput
-            title='BASIS'
+            title={basis.title}
+            defaultValue={basis.defaultValue}
             style={{flex: 1}}
           />
           <ElementInput
-            title='GROW'
+            title={grow.title}
+            defaultValue={grow.defaultValue.toString()}
             style={{flex: 1}}
           />
           <ElementInput
-            title='SHRINK'
+            title={shrink.title}
+            defaultValue={shrink.defaultValue.toString()}
             style={{flex: 1}}
           />
         </View>
         <ElementChoose
-          title='FLEX WRAP'
-          data={['no wrap', 'wrap', 'shrink']}
+          title={flexWrap.title}
+          data={flexWrap.value}
           style={[stylesCommon.elementEditor]}
         />
       </View>

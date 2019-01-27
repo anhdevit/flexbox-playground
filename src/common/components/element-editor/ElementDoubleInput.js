@@ -21,6 +21,8 @@ class ElementDoubleInput extends Component {
     render() {
         const {
             title,
+            defaultValueLeft,
+            defaultValueRight,
             style
         } = this.props;
 
@@ -35,9 +37,11 @@ class ElementDoubleInput extends Component {
                     style={styles.viewInput}
                 >
                     <TextInput
+                        defaultValue={defaultValueLeft}
                         style={[styles.textInput, styleCommon.heightElement]}
                     />
                     <TextInput
+                        defaultValue={defaultValueRight}
                         style={[styles.textInput, styleCommon.heightElement]}
                     />
                 </View>

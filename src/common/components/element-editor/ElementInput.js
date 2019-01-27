@@ -21,6 +21,7 @@ class ElementInput extends Component {
     render() {
         const {
             title,
+            defaultValue,
             style
         } = this.props;
 
@@ -32,7 +33,7 @@ class ElementInput extends Component {
                     title={title}
                 />
                 <TextInput 
-                    placeholder='abc'
+                    defaultValue={defaultValue}
                     style={[styles.textInput, styleCommon.heightElement]}
                 />
             </View>
