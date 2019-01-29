@@ -11,23 +11,15 @@ import { SafeAreaView } from 'react-navigation';
 import { Platform, StyleSheet, Text, View } from 'react-native';
 import Action from './Action';
 import EditorTabbar from '../../router/EditorTabbar';
-import EditorButton from './EditorButton'
+import EditorButton from './EditorButton';
 import colors from '../../common/theme/colors';
 import Close from '../../common/components/buttons/Close';
 import HeaderTitle from '../../common/components/texts/HeaderTitle';
 
 export default class Tab extends Component {
   static navigationOptions = ({ navigation }) => ({
-    headerTitle: (
-      <HeaderTitle 
-        title='Editor'
-      />
-    ),
-    headerLeft: (
-      <Close
-        navigation={navigation}
-      />
-    ),
+    headerTitle: <HeaderTitle title="Editor" />,
+    headerLeft: <Close navigation={navigation} />
   });
 
   render() {
@@ -49,6 +41,6 @@ export default class Tab extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.background,
-  },
+    backgroundColor: colors.background
+  }
 });

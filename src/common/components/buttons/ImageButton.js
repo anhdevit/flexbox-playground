@@ -1,27 +1,15 @@
 import React, { Component } from 'react';
-import {
-  Text,
-  TouchableOpacity,
-  Image,
-  StyleSheet
-} from 'react-native';
+import { Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
 import colors from '../../../common/theme/colors';
 
 class ImageButton extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-    };
+    this.state = {};
   }
 
   render() {
-    const {
-      onPress,
-      imageRight,
-      title,
-      styleCustom,
-      disable
-    } = this.props;
+    const { onPress, imageRight, title, styleCustom, disable } = this.props;
     let styleButtonDisable = {};
     let styleTextDisable = {};
     let styleImageDisable = {};
@@ -30,7 +18,7 @@ class ImageButton extends Component {
       styleButtonDisable = {
         backgroundColor: colors.disable,
         borderColor: colors.border,
-        borderWidth: 1,
+        borderWidth: 1
       };
       styleImageDisable = {
         tintColor: colors.border
@@ -38,23 +26,21 @@ class ImageButton extends Component {
 
       styleTextDisable = {
         color: colors.border
-      }
+      };
     }
-    
+
     return (
       <TouchableOpacity
         style={[styles.button, styleCustom, styleButtonDisable]}
         onPress={onPress}
       >
-        {
-          imageRight && <Image
+        {imageRight && (
+          <Image
             style={[styles.image, styleImageDisable]}
             source={imageRight}
           />
-        }
-        <Text
-          style={[styles.text, styleTextDisable]}
-        >{title}</Text>
+        )}
+        <Text style={[styles.text, styleTextDisable]}>{title}</Text>
       </TouchableOpacity>
     );
   }
@@ -70,14 +56,14 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     justifyContent: 'center',
     flexDirection: 'row',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   text: {
     color: 'white',
-    alignSelf: 'center',
+    alignSelf: 'center'
   },
   image: {
     marginRight: 10,
     tintColor: colors.background
   }
-})
+});

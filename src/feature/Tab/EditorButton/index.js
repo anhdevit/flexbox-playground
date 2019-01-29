@@ -15,23 +15,19 @@ export default class EditorButton extends Component {
     return (
       <View style={styles.container}>
         <ImageButton
-          title='add child node'
+          title="add child node"
           imageRight={require('../../../resources/assets/common/ic_add_circle_outline.png')}
-          styleCustom={
-            {
-              flex: 1
-            }
-          }
+          styleCustom={{
+            flex: 1
+          }}
         />
         <ImageButton
-          title='remove node'
+          title="remove node"
           imageRight={require('../../../resources/assets/common/ic_remove_circle_outline.png')}
-          styleCustom={
-            {
-              flex: 1,
-              marginLeft: 15,
-            }
-          }
+          styleCustom={{
+            flex: 1,
+            marginLeft: 15
+          }}
           disable
         />
       </View>
@@ -45,5 +41,5 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
     paddingHorizontal: 20,
     paddingVertical: 10
-  },
+  }
 });

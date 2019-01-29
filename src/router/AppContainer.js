@@ -6,8 +6,8 @@
  * @flow
  */
 
-import React, {Component} from 'react';
-import { createAppContainer } from 'react-navigation'
+import React, { Component } from 'react';
+import { createAppContainer } from 'react-navigation';
 import MainDrawerNavigator from './MainDrawerNavigator';
 
-export default AppContainer = createAppContainer(MainDrawerNavigator);
+export default (AppContainer = createAppContainer(MainDrawerNavigator));

@@ -6,31 +6,17 @@
  * @flow
  */
 
-import React, {Component} from 'react';
-import {
-  Platform, 
-  StyleSheet, 
-  Text, 
-  View,
-  Button
-} from 'react-native';
+import React, { Component } from 'react';
+import { StyleSheet, Text } from 'react-native';
 import { SafeAreaView } from 'react-navigation';
 import Menu from '../../common/components/buttons/Menu';
-import colors from '../../common/theme/colors';
 import HeaderTitle from '../../common/components/texts/HeaderTitle';
+import colors from '../../common/theme/colors';
 
 export default class App extends Component {
   static navigationOptions = ({ navigation }) => ({
-    headerTitle: (
-      <HeaderTitle 
-        title='Documentation'
-      />
-    ),
-    headerLeft: (
-      <Menu 
-        navigation={navigation}
-      />
-    )
+    headerTitle: <HeaderTitle title="Documentation" />,
+    headerLeft: <Menu navigation={navigation} />
   });
 
   render() {
@@ -47,6 +33,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: colors.background,
-  },
+    backgroundColor: colors.background
+  }
 });

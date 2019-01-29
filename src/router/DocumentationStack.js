@@ -1,13 +1,9 @@
-import React from 'react'
+import React from 'react';
 import { createStackNavigator } from 'react-navigation';
 import Documentation from '../feature/Documentation';
 
-const DocumentationStack = createStackNavigator(
-    {
-        Documentation: {
-            screen: Documentation
-        },
-    }
-);
+const DocumentationStack = createStackNavigator({
+  Documentation: Documentation
+});
 
 export default DocumentationStack;

@@ -16,41 +16,18 @@ import colors from '../../common/theme/colors';
 
 export default class Playground extends Component {
   static navigationOptions = ({ navigation }) => ({
-    headerTitle: (
-      <HeaderTitle
-        title='Playground'
-      />
-    ),
-    headerLeft: (
-      <Menu
-        navigation={navigation}
-      />
-    ),
-    headerRight: (
-      <Editor
-        navigation={navigation}
-      />
-    )
+    headerTitle: <HeaderTitle title="Playground" />,
+    headerLeft: <Menu navigation={navigation} />,
+    headerRight: <Editor navigation={navigation} />
   });
 
   render() {
     return (
       <SafeAreaView style={styles.container}>
-        <TouchableOpacity
-          style={styles.rootView}
-        >
-          <TouchableOpacity
-            style={styles.childView}
-          >
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.childView}
-          >
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.childView}
-          >
-          </TouchableOpacity>
+        <TouchableOpacity style={styles.rootView}>
+          <TouchableOpacity style={styles.childView} />
+          <TouchableOpacity style={styles.childView} />
+          <TouchableOpacity style={styles.childView} />
           <Text>abc</Text>
         </TouchableOpacity>
       </SafeAreaView>
@@ -74,12 +51,12 @@ const styles = StyleSheet.create({
   },
   icon: {
     width: 24,
-    height: 24,
+    height: 24
   },
   childView: {
     width: 50,
     height: 50,
     borderWidth: 1,
-    borderColor: 'gray',
+    borderColor: 'gray'
   }
 });

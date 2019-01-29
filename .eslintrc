@@ -1,9 +1,15 @@
 {
-    "parser": "babel-eslint",
-    "extends": "airbnb",
-    "plugins": [
-        "react",
-        "jsx-ally",
-        "import"
-    ]
+  "extends": "rallycoding",
+  "rules": {
+    "global-require": "off",
+    "no-underscore-dangle": "off",
+    "no-unused-expressions": "off",
+    "no-param-reassign": "off",
+    "import/no-unresolved": "off",
+    "import/no-extraneous-dependencies": "off",
+    "no-mixed-operators": "off",
+    "camelcase": "off",
+    "one-var": "off",
+    "no-nested-ternary": "off"
+  }
 }

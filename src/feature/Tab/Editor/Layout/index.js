@@ -31,7 +31,7 @@ export default class Layout extends Component {
       margin,
       position,
       positionType
-    } = layout
+    } = layout;
     return (
       <ScrollView style={stylesCommon.viewEditor}>
         <ElementDoubleInput
@@ -103,6 +103,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.background,
-    paddingHorizontal: 20,
-  },
+    paddingHorizontal: 20
+  }
 });

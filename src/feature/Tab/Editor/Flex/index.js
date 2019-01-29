@@ -15,7 +15,6 @@ import { flex } from '../../../../common/constants/flex-box';
 import colors from '../../../../common/theme/colors';
 import stylesCommon from '../../../../common/theme/styles';
 
-
 export default class Flex extends Component {
   render() {
     const { direction, flexDirection, basis, grow, shrink, flexWrap } = flex;
@@ -33,9 +32,7 @@ export default class Flex extends Component {
           option={flexDirection.value}
           style={[stylesCommon.elementEditor]}
         />
-        <View
-          style={styles.viewRow}
-        >
+        <View style={styles.viewRow}>
           <ElementInput
             title={basis.title}
             defaultValue={basis.defaultValue}
@@ -66,10 +63,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.background,
-    paddingHorizontal: 20,
+    paddingHorizontal: 20
   },
   viewRow: {
     flexDirection: 'row',
-    marginTop: 20,
-  },
+    marginTop: 20
+  }
 });

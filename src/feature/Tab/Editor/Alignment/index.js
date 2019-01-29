@@ -47,5 +47,4 @@ export default class Alignment extends Component {
   }
 }
 
-const styles = StyleSheet.create({
-});
+const styles = StyleSheet.create({});
