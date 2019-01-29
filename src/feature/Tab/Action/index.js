@@ -7,14 +7,9 @@
  */
 
 import React, { Component } from 'react';
-import {
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity
-} from 'react-native';
-import ImageButton from '../../../common/components/buttons/ImageButton';
+import { StyleSheet, View } from 'react-native';
 import DropdownButton from '../../../common/components/buttons/DropdownButton';
+import ImageButton from '../../../common/components/buttons/ImageButton';
 
 export default class Action extends Component {
   render() {

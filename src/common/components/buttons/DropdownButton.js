@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
+import ModalDropdown from 'react-native-modal-dropdown';
 import colors from '../../../common/theme/colors';
 import styleCommon from '../../../common/theme/styles';
-import ModalDropdown from 'react-native-modal-dropdown';
 
 class DropdownButton extends Component {
     constructor(props) {

@@ -7,12 +7,7 @@
  */
 
 import React, { Component } from 'react';
-import {
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity
-} from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import ImageButton from '../../../common/components/buttons/ImageButton';
 
 export default class EditorButton extends Component {

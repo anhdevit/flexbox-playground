@@ -1,11 +1,5 @@
 import React, { Component } from 'react';
-import {
-    Text,
-    StyleSheet,
-    Image,
-    View,
-    TouchableOpacity
-} from 'react-native';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import colors from '../../../common/theme/colors';
 
 class TitleElement extends Component {
