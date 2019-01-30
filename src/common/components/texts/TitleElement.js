@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import colors from '../../../common/theme/colors';
+import R from '@R/R';
 
 class TitleElement extends Component {
   constructor(props) {
@@ -15,10 +16,7 @@ class TitleElement extends Component {
       <View style={styles.view}>
         <Text style={styles.text}>{title}</Text>
         <TouchableOpacity>
-          <Image
-            style={styles.image}
-            source={require('../../../resources/assets/common/ic_info_outline.png')}
-          />
+          <Image style={styles.image} source={R.images.ic_info_outline} />
         </TouchableOpacity>
       </View>
     );

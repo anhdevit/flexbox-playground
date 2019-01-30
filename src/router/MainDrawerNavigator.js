@@ -5,6 +5,7 @@ import Documentation from '../feature/Documentation';
 import PlaygroundStack from './PlaygroundStack';
 import DocumentationStack from './DocumentationStack';
 import colors from '../common/theme/colors';
+import R from '@R/R';
 
 const MainDrawerNavigator = createDrawerNavigator(
   {
@@ -13,7 +14,7 @@ const MainDrawerNavigator = createDrawerNavigator(
       navigationOptions: {
         drawerIcon: ({ tintColor, focused }) => (
           <Image
-            source={require('../resources/assets/common/ic_view_quilt.png')}
+            source={R.images.ic_view_quilt}
             style={{ tintColor: tintColor }}
           />
         )
@@ -24,7 +25,7 @@ const MainDrawerNavigator = createDrawerNavigator(
       navigationOptions: {
         drawerIcon: ({ tintColor, focused }) => (
           <Image
-            source={require('../resources/assets/common/ic_format_align_left.png')}
+            source={R.images.ic_format_align_left}
             style={{ tintColor: tintColor }}
           />
         )

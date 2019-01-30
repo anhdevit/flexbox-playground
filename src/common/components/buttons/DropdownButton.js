@@ -3,6 +3,7 @@ import { Image, StyleSheet, Text, View } from 'react-native';
 import ModalDropdown from 'react-native-modal-dropdown';
 import colors from '../../../common/theme/colors';
 import styleCommon from '../../../common/theme/styles';
+import R from '@R/R';
 
 class DropdownButton extends Component {
   constructor(props) {
@@ -25,12 +26,7 @@ class DropdownButton extends Component {
           onPress={onPress}
         >
           <Text style={styles.text}>{title}</Text>
-          {
-            <Image
-              style={styles.image}
-              source={require('../../../resources/assets/common/ic_arrow_drop_down.png')}
-            />
-          }
+          {<Image style={styles.image} source={R.images.ic_arrow_drop_down} />}
         </View>
       </ModalDropdown>
     );

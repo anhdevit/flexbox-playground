@@ -6,6 +6,15 @@
       {
         "legacy": true
       }
+    ],
+    [
+      "module-resolver",
+      {
+        "root": ["./src/"],
+        "alias": {
+          "@R": "./src/resources"
+        }
+      }
     ]
   ]
 }

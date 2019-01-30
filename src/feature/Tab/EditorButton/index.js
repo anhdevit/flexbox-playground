@@ -9,6 +9,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native';
 import ImageButton from '../../../common/components/buttons/ImageButton';
+import R from '@R/R';
 
 export default class EditorButton extends Component {
   render() {
@@ -16,14 +17,14 @@ export default class EditorButton extends Component {
       <View style={styles.container}>
         <ImageButton
           title="add child node"
-          imageRight={require('../../../resources/assets/common/ic_add_circle_outline.png')}
+          imageRight={R.images.ic_add_circle_outline}
           styleCustom={{
             flex: 1
           }}
         />
         <ImageButton
           title="remove node"
-          imageRight={require('../../../resources/assets/common/ic_remove_circle_outline.png')}
+          imageRight={R.images.ic_remove_circle_outline}
           styleCustom={{
             flex: 1,
             marginLeft: 15

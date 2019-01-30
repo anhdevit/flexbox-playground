@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Image, StyleSheet, TouchableOpacity } from 'react-native';
 import colors from '../../../common/theme/colors';
+import R from '@R/R';
 
 class Menu extends Component {
   constructor(props) {
@@ -19,7 +20,7 @@ class Menu extends Component {
         <Image
           style={styles.image}
           resizeMode="contain"
-          source={require('../../../resources/assets/common/ic_menu.png')}
+          source={R.images.ic_menu}
         />
       </TouchableOpacity>
     );

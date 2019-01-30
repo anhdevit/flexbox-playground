@@ -1,5 +1,7 @@
 {
-  "extends": "rallycoding",
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "plugins": ["react", "jsx-ally", "import"],
   "rules": {
     "global-require": "off",
     "no-underscore-dangle": "off",

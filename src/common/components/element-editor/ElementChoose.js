@@ -7,7 +7,6 @@ import ButtonBorderCenter from '../buttons/ButtonBorderCenter';
 import ButtonBorderRight from '../buttons/ButtonBorderRight';
 
 const RenderListButton = ({ data = [] }) => {
-  console.log(222, data);
   return data.map((value, index) => {
     switch (index) {
       case 0:
