@@ -12,7 +12,8 @@
       {
         "root": ["./src/"],
         "alias": {
-          "@R": "./src/resources"
+          "@R": "./src/resources",
+          "@common": "./src/common"
         }
       }
     ]
