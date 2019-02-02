@@ -21,6 +21,13 @@ export default class Playground extends Component {
     headerRight: <Editor navigation={navigation} />
   });
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentElement: ''
+    };
+  }
+
   render() {
     return (
       <SafeAreaView style={styles.container}>
@@ -28,7 +35,6 @@ export default class Playground extends Component {
           <TouchableOpacity style={styles.childView} />
           <TouchableOpacity style={styles.childView} />
           <TouchableOpacity style={styles.childView} />
-          <Text>abc</Text>
         </TouchableOpacity>
       </SafeAreaView>
     );

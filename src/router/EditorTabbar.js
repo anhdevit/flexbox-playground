@@ -30,8 +30,7 @@ const EditorTabbarTabbar = createMaterialTopTabNavigator(
       indicatorStyle: {
         backgroundColor: colors.primary,
         height: 3
-      },
-      scrollEnabled: true
+      }
     }
   }
 );
