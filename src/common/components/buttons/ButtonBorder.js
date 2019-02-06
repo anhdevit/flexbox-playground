@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, TouchableHighlight } from 'react-native';
 import colors from '../../../common/theme/colors';
 
 class ButtonBorder extends Component {
@@ -9,11 +9,14 @@ class ButtonBorder extends Component {
   }
 
   render() {
-    const { onPress, title } = this.props;
+    const { onPress, title, styleCustom } = this.props;
     return (
-      <TouchableOpacity style={styles.button} onPress={onPress}>
+      <TouchableHighlight
+        style={[styles.button, styleCustom]}
+        onPress={onPress}
+      >
         <Text style={styles.text}>{title}</Text>
-      </TouchableOpacity>
+      </TouchableHighlight>
     );
   }
 }
@@ -26,8 +29,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderColor: colors.border,
-    flex: 1,
-    paddingVertical: 5
+    flex: 1
   },
   text: {
     color: colors.onBackground,

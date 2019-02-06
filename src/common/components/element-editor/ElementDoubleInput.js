@@ -1,15 +1,8 @@
 import React, { Component } from 'react';
-import {
-  Text,
-  TouchableOpacity,
-  Image,
-  StyleSheet,
-  View,
-  TextInput
-} from 'react-native';
+import { StyleSheet, TextInput, View } from 'react-native';
 import colors from '../../../common/theme/colors';
-import TitleElement from '../texts/TitleElement';
 import styleCommon from '../../../common/theme/styles';
+import TitleElement from '../texts/TitleElement';
 
 class ElementDoubleInput extends Component {
   constructor(props) {

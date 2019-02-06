@@ -16,7 +16,10 @@ export default class Action extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <DropdownButton title="Get Code" option={['a', 'b', 'c']} />
+        <DropdownButton
+          title="Get Code"
+          option={['Litho', 'ComponentKit', 'React Native']}
+        />
         <ImageButton
           title="Share URL"
           imageRight={R.images.ic_share}

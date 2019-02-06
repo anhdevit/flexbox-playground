@@ -1,20 +1,36 @@
 import React, { Component } from 'react';
-import { Text, TouchableOpacity, Image, StyleSheet, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import colors from '../../../common/theme/colors';
+import ButtonBorder from '../buttons/ButtonBorder';
 import TitleElement from '../texts/TitleElement';
-import ButtonBorderLeft from '../buttons/ButtonBorderLeft';
-import ButtonBorderCenter from '../buttons/ButtonBorderCenter';
-import ButtonBorderRight from '../buttons/ButtonBorderRight';
 
 const RenderListButton = ({ data = [] }) => {
   return data.map((value, index) => {
     switch (index) {
       case 0:
-        return <ButtonBorderLeft title={value} key={index} />;
+        return (
+          <ButtonBorder
+            title={value}
+            key={index}
+            styleCustom={styles.buttonLeft}
+          />
+        );
       case data.length - 1:
-        return <ButtonBorderRight title={value} key={index} />;
+        return (
+          <ButtonBorder
+            title={value}
+            key={index}
+            styleCustom={styles.buttonRight}
+          />
+        );
       default:
-        return <ButtonBorderCenter title={value} key={index} />;
+        return (
+          <ButtonBorder
+            title={value}
+            key={index}
+            styleCustom={styles.buttonCenter}
+          />
+        );
     }
   });
 };
@@ -48,6 +64,21 @@ const styles = StyleSheet.create({
   },
   viewListButton: {
     flexDirection: 'row',
-    paddingVertical: 10
+    paddingVertical: 10,
+    flex: 1
+  },
+
+  buttonCenter: {
+    paddingVertical: 5
+  },
+  buttonLeft: {
+    borderTopLeftRadius: 5,
+    borderBottomLeftRadius: 5,
+    marginRight: -0.5
+  },
+  buttonRight: {
+    borderTopRightRadius: 5,
+    borderBottomRightRadius: 5,
+    marginLeft: -0.5
   }
 });
