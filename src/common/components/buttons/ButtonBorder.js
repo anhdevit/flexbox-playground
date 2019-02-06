@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, TouchableHighlight } from 'react-native';
 import colors from '../../../common/theme/colors';
+import styleCommon from '../../../common/theme/styles';
 
 class ButtonBorder extends Component {
   constructor(props) {
@@ -12,8 +13,10 @@ class ButtonBorder extends Component {
     const { onPress, title, styleCustom } = this.props;
     return (
       <TouchableHighlight
-        style={[styles.button, styleCustom]}
-        onPress={onPress}
+        style={[styles.button, styleCommon.heightElement, styleCustom]}
+        onPress={() => {
+          console.log('abc');
+        }}
       >
         <Text style={styles.text}>{title}</Text>
       </TouchableHighlight>
