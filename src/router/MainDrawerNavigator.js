@@ -1,43 +1,15 @@
-import React, { Component } from 'react';
-import { Image } from 'react-native';
-import { createDrawerNavigator } from 'react-navigation';
-import Documentation from '../feature/Documentation';
+import React from 'react';
 import PlaygroundStack from './PlaygroundStack';
 import DocumentationStack from './DocumentationStack';
-import colors from '../common/theme/colors';
-import R from '@R/R';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
-const MainDrawerNavigator = createDrawerNavigator(
-  {
-    Playground: {
-      screen: PlaygroundStack,
-      navigationOptions: {
-        drawerIcon: ({ tintColor, focused }) => (
-          <Image
-            source={R.images.ic_view_quilt}
-            style={{ tintColor: tintColor }}
-          />
-        )
-      }
-    },
-    Documentation: {
-      screen: DocumentationStack,
-      navigationOptions: {
-        drawerIcon: ({ tintColor, focused }) => (
-          <Image
-            source={R.images.ic_format_align_left}
-            style={{ tintColor: tintColor }}
-          />
-        )
-      }
-    }
-  },
-  {
-    contentOptions: {
-      activeTintColor: colors.primary,
-      inactiveTintColor: colors.onBackground
-    }
-  }
-);
+const Drawer = createDrawerNavigator();
 
-export default MainDrawerNavigator;
+export default function MainDrawerNavigator() {
+  return (
+      <Drawer.Navigator initialRouteName="PlaygroundStack">
+        <Drawer.Screen name="PlaygroundStack" component={PlaygroundStack} />
+        <Drawer.Screen name="DocumentationStack" component={DocumentationStack} />
+      </Drawer.Navigator>
+  );
+}
