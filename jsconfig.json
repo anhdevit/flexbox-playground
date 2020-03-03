@@ -3,7 +3,8 @@
     "experimentalDecorators": true,
     "baseUrl": "./src",
     "paths": {
-      "@R/*": ["resources/*"]
+      "@R/*": ["resources/*"],
+      "@common/*": ["common/*"]
     }
   }
 }
