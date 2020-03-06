@@ -6,8 +6,17 @@
  * @flow
  */
 
-import React, { Component } from 'react';
-import { createAppContainer } from 'react-navigation';
 import MainDrawerNavigator from './MainDrawerNavigator';
+import 'react-native-gesture-handler';
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
 
-export default (AppContainer = createAppContainer(MainDrawerNavigator));
+function App() {
+    return (
+      <NavigationContainer>
+        <MainDrawerNavigator />
+      </NavigationContainer>
+    );
+  }
+  
+  export default App;

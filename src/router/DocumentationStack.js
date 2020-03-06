@@ -1,9 +1,26 @@
-import React from 'react';
-import { createStackNavigator } from 'react-navigation';
+import { createStackNavigator } from '@react-navigation/stack';
 import Documentation from '../feature/Documentation';
 
-const DocumentationStack = createStackNavigator({
-  Documentation: Documentation
-});
+const Stack = createStackNavigator();
+
+function DocumentationStack() {
+  return (
+    <Stack.Navigator
+      initialRouteName="Documentation"
+      screenOptions={{ gestureEnabled: false }}
+    >
+      <Stack.Screen
+        name="Documentation"
+        component={Documentation}
+        options={{ title: 'Documentation' }}
+      />
+      <Stack.Screen
+        name="Profile"
+        component={ProfileScreen}
+        initialParams={{ user: 'me' }}
+      />
+    </Stack.Navigator>
+  );
+}
 
 export default DocumentationStack;

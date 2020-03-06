@@ -7,8 +7,7 @@
  */
 
 import React, { Component } from 'react';
-import { StyleSheet, Text, TouchableOpacity } from 'react-native';
-import { SafeAreaView } from 'react-navigation';
+import { StyleSheet, Text, TouchableOpacity, SafeAreaView } from 'react-native';
 import Editor from '../../common/components/buttons/Editor';
 import Menu from '../../common/components/buttons/Menu';
 import HeaderTitle from '../../common/components/texts/HeaderTitle';

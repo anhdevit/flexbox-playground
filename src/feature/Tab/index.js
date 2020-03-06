@@ -7,8 +7,7 @@
  */
 
 import React, { Component } from 'react';
-import { SafeAreaView } from 'react-navigation';
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import { Platform, StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import Action from './Action';
 import EditorTabbar from '../../router/EditorTabbar';
 import EditorButton from './EditorButton';

@@ -1,38 +1,19 @@
-import React from 'react';
-import {
-  createAppContainer,
-  createMaterialTopTabNavigator
-} from 'react-navigation';
 import Flex from '../feature/Tab/Editor/Flex';
 import Layout from '../feature/Tab/Editor/Layout';
 import Alignment from '../feature/Tab/Editor/Alignment';
-import colors, { hexToRGB } from '../common/theme/colors';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import { NavigationContainer } from '@react-navigation/native';
 
-const EditorTabbarTabbar = createMaterialTopTabNavigator(
-  {
-    Flex: Flex,
-    Alignment: Alignment,
-    Layout: Layout
-  },
-  {
-    initialRouteName: 'Flex',
-    tabBarOptions: {
-      upperCaseLabel: false,
-      activeTintColor: colors.primary,
-      inactiveTintColor: colors.onBackground,
-      labelStyle: {
-        fontSize: 14,
-        fontWeight: '500'
-      },
-      style: {
-        backgroundColor: colors.background
-      },
-      indicatorStyle: {
-        backgroundColor: colors.primary,
-        height: 3
-      }
-    }
-  }
-);
+const Tab = createMaterialTopTabNavigator();
 
-export default createAppContainer(EditorTabbarTabbar);
+export default function EditorTabbar() {
+  return (
+    <NavigationContainer>
+      <Tab.Navigator>
+        <Tab.Screen name="Flex" component={Flex} />
+        <Tab.Screen name="Alignment" component={Alignment} />
+        <Tab.Screen name="Layout" component={Layout} />
+      </Tab.Navigator>
+    </NavigationContainer>
+  );
+}
