@@ -7,76 +7,56 @@ import {
   View,
   TextInput
 } from 'react-native';
-import colors from '../../../common/theme/colors';
+import colors from '../../theme/colors';
 import TitleElement from '../texts/TitleElement';
-import styleCommon from '../../../common/theme/styles';
+import styleCommon from '../../theme/styles';
 
-class ElementFourInput extends Component {
+class ElementDoubleInput extends Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
 
   render() {
-    const {
-      title,
-      defaultValueLeft,
-      defaultValueTop,
-      defaultValueRight,
-      defaultValueBottom,
-      style
-    } = this.props;
+    const { title, defaultValueLeft, defaultValueRight, style } = this.props;
 
     return (
-      <View style={[styles.viewElement, style]}>
-        <TextInput
-          defaultValue={defaultValueTop}
-          style={[styles.textInput, styleCommon.heightElement]}
-        />
+      <View style={style}>
+        <TitleElement title={title} />
         <View style={styles.viewInput}>
           <TextInput
             defaultValue={defaultValueLeft}
             style={[styles.textInput, styleCommon.heightElement]}
           />
-          <Text style={styles.textCenter}>{title}</Text>
           <TextInput
             defaultValue={defaultValueRight}
             style={[styles.textInput, styleCommon.heightElement]}
           />
         </View>
-        <TextInput
-          defaultValue={defaultValueBottom}
-          style={[styles.textInput, styleCommon.heightElement]}
-        />
       </View>
     );
   }
 }
 
-export default ElementFourInput;
+export default ElementDoubleInput;
 
 const styles = StyleSheet.create({
-  viewElement: {
-    alignItems: 'center'
-  },
   text: {
     color: colors.onBackground,
     fontSize: 20,
     fontWeight: '500'
   },
   viewInput: {
-    flexDirection: 'row',
-    alignItems: 'center'
-  },
-  textCenter: {
-    marginHorizontal: 20
+    flexDirection: 'row'
   },
   textInput: {
     borderColor: 'gray',
     borderWidth: 1,
+    marginRight: 10,
     borderRadius: 5,
     height: 30,
     paddingLeft: 10,
-    width: 70
+    marginTop: 10,
+    flex: 1
   }
 });

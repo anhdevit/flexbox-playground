@@ -2,10 +2,10 @@ const fs = require('fs');
 const imageFileNames = () => {
   const array = fs
     .readdirSync('src/resources/assets/common')
-    .filter(file => {
+    .filter((file: string) => {
       return file.endsWith('.png');
     })
-    .map(file => {
+    .map((file: string) => {
       return file
         .replace('@2x.png', '')
         .replace('@3x.png', '')
