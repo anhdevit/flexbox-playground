@@ -1,4 +1,4 @@
-export default (colors = {
+export default ({
   primary: '#6FCDBB',
   primaryVariant: '#333',
   secondary: '#333',
@@ -17,7 +17,7 @@ export default (colors = {
   textDisable: '#B7B7B7'
 });
 
-export function hexToRGB(hex, alpha) {
+export function hexToRGB(hex: string, alpha: string) {
   var r = parseInt(hex.slice(1, 3), 16),
     g = parseInt(hex.slice(3, 5), 16),
     b = parseInt(hex.slice(5, 7), 16);

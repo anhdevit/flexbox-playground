@@ -1,21 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react'
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
-import colors from '../../../common/theme/colors';
+import colors from '../../theme/colors';
 
-class ButtonBorderRight extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+export interface Props {
+  onPress?: any,
+  title: string;
+}
 
-  render() {
-    const { onPress, title } = this.props;
-    return (
-      <TouchableOpacity style={styles.button} onPress={onPress}>
-        <Text style={styles.text}>{title}</Text>
-      </TouchableOpacity>
-    );
-  }
+const ButtonBorderRight: React.FC<Props> = (props) => {
+  return (
+    <TouchableOpacity style={styles.button} onPress={props.onPress}>
+      <Text style={styles.text}>{props.title}</Text>
+    </TouchableOpacity>
+  );
 }
 
 export default ButtonBorderRight;

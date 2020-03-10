@@ -16,7 +16,7 @@ import Close from '../../common/components/buttons/Close';
 import HeaderTitle from '../../common/components/texts/HeaderTitle';
 
 export default class Tab extends Component {
-  static navigationOptions = ({ navigation }) => ({
+  static navigationOptions = ({navigation} : { navigation: any }) => ({
     headerTitle: <HeaderTitle title="Editor" />,
     headerLeft: <Close navigation={navigation} />
   });
@@ -25,12 +25,7 @@ export default class Tab extends Component {
     return (
       <SafeAreaView style={styles.container}>
         <Action />
-        <EditorTabbar
-          style={{
-            flex: 1,
-            backgroundColor: 'black'
-          }}
-        />
+        <EditorTabbar />
         <EditorButton />
       </SafeAreaView>
     );
