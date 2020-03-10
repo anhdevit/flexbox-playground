@@ -7,9 +7,9 @@ import R from '@R/R';
 
 export interface Props {
   option: any,
-  onPress: () => {},
+  onPress?: any,
   title: string,
-  styleCustom: Object
+  styleCustom?: Object
 }
 
 const DropdownButton: React.FC<Props> = (props) => {
@@ -17,7 +17,6 @@ const DropdownButton: React.FC<Props> = (props) => {
     <ModalDropdown
       options={props.option}
       dropdownStyle={styles.styleDropdown}
-      onPress={props.onPress}
     >
       <View
         style={[styles.button, props.styleCustom, styleCommon.heightElement]}

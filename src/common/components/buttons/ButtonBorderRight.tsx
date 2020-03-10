@@ -3,7 +3,7 @@ import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 import colors from '../../theme/colors';
 
 export interface Props {
-  onPress: () => {},
+  onPress?: any,
   title: string;
 }
 

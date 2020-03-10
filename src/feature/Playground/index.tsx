@@ -6,39 +6,33 @@
  * @flow
  */
 
-import React, { Component } from 'react';
-import { StyleSheet, Text, TouchableOpacity, SafeAreaView } from 'react-native';
-import Editor from '../../common/components/buttons/Editor';
-import Menu from '../../common/components/buttons/Menu';
-import HeaderTitle from '../../common/components/texts/HeaderTitle';
+import React from 'react';
+import { SafeAreaView, StyleSheet, TouchableOpacity } from 'react-native';
 import colors from '../../common/theme/colors';
 
-export default class Playground extends Component {
-  static navigationOptions = ({ navigation }) => ({
-    headerTitle: <HeaderTitle title="Playground" />,
-    headerLeft: <Menu navigation={navigation} />,
-    headerRight: <Editor navigation={navigation} />
-  });
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      currentElement: ''
-    };
-  }
-
-  render() {
-    return (
-      <SafeAreaView style={styles.container}>
-        <TouchableOpacity style={styles.rootView}>
-          <TouchableOpacity style={styles.childView} />
-          <TouchableOpacity style={styles.childView} />
-          <TouchableOpacity style={styles.childView} />
-        </TouchableOpacity>
-      </SafeAreaView>
-    );
-  }
+export interface Props {
+  navigation: any,
 }
+
+const Playground: React.FC<Props> = (props) => {
+  // static navigationOptions = ({ navigation }) => ({
+  //   headerTitle: <HeaderTitle title="Playground" />,
+  //   headerLeft: <Menu navigation={navigation} />,
+  //   headerRight: <Editor navigation={navigation} />
+  // });
+
+  return (
+    <SafeAreaView style={styles.container}>
+    <TouchableOpacity style={styles.rootView}>
+      <TouchableOpacity style={styles.childView} />
+      <TouchableOpacity style={styles.childView} />
+      <TouchableOpacity style={styles.childView} />
+    </TouchableOpacity>
+  </SafeAreaView>
+  );
+}
+
+export default Playground;
 
 const styles = StyleSheet.create({
   container: {

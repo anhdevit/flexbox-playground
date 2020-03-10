@@ -4,7 +4,7 @@ import colors from '../../theme/colors';
 import styleCommon from '../../theme/styles';
 
 export interface Props {
-  onPress: () => {},
+  onPress?: any,
   title: string;
 }
 

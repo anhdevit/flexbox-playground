@@ -1,8 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
-  Text,
-  TouchableOpacity,
-  Image,
   StyleSheet,
   View,
   TextInput
@@ -11,31 +8,32 @@ import colors from '../../theme/colors';
 import TitleElement from '../texts/TitleElement';
 import styleCommon from '../../theme/styles';
 
-class ElementDoubleInput extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+export interface Props {
+  navigation?: any,
+  title: string,
+  defaultValueLeft: string,
+  defaultValueRight: string,
+  style: any,
+}
 
-  render() {
-    const { title, defaultValueLeft, defaultValueRight, style } = this.props;
+const ElementDoubleInput: React.FC<Props> = (props) => {
+  const { title, defaultValueLeft, defaultValueRight, style } = props;
 
-    return (
-      <View style={style}>
-        <TitleElement title={title} />
-        <View style={styles.viewInput}>
-          <TextInput
-            defaultValue={defaultValueLeft}
-            style={[styles.textInput, styleCommon.heightElement]}
-          />
-          <TextInput
-            defaultValue={defaultValueRight}
-            style={[styles.textInput, styleCommon.heightElement]}
-          />
-        </View>
+  return (
+    <View style={style}>
+      <TitleElement title={title} />
+      <View style={styles.viewInput}>
+        <TextInput
+          defaultValue={defaultValueLeft}
+          style={[styles.textInput, styleCommon.heightElement]}
+        />
+        <TextInput
+          defaultValue={defaultValueRight}
+          style={[styles.textInput, styleCommon.heightElement]}
+        />
       </View>
-    );
-  }
+    </View>
+  );
 }
 
 export default ElementDoubleInput;

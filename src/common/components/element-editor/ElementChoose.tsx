@@ -15,27 +15,24 @@ export interface Props {
 const ElementChoose: React.FC<Props> = (props) => {
   const { title, data, style } = props;
 
-  const RenderListButton = ({ data = [] }) => {
-    return data.map((value, index) => {
+  const RenderListButton = () => {
+    return data.map((value: string, index: number) => {
 
       switch (index) {
         case 0:
           return <ButtonBorderLeft
             title={value}
             key={index}
-            onPress={() => { }}
           />;
         case data.length - 1:
           return <ButtonBorderRight
             title={value}
             key={index}
-            onPress={() => { }}
           />;
         default:
           return <ButtonBorderCenter
             title={value}
             key={index}
-            onPress={() => { }}
           />;
       }
     });
@@ -45,7 +42,7 @@ const ElementChoose: React.FC<Props> = (props) => {
     <View style={style}>
       <TitleElement title={title} />
       <View style={styles.viewListButton}>
-        <RenderListButton data={data} />
+        <RenderListButton />
       </View>
     </View>
   );

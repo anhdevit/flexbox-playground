@@ -1,4 +1,4 @@
-const fs = require('fs');
+export const fs = require('fs');
 const imageFileNames = () => {
   const array = fs
     .readdirSync('src/resources/assets/common')

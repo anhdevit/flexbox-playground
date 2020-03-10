@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
 import colors from '../../theme/colors';
 
 export interface Props {
-  navigation: any,
-  onPress: () => {},
+  onPress?: any,
   imageRight: any,
   title: string,
   styleCustom: object,
-  disable: boolean,
+  disable?: boolean,
 }
 
 const ImageButton: React.FC<Props> = (props) => {
