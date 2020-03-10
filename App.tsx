@@ -9,8 +9,7 @@
 import React from 'react';
 import AppContainer from './src/router/AppContainer';
 
-const App: () => React$Node = () => {
-
+function App() {
   return (
     <AppContainer />
   );

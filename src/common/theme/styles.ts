@@ -9,7 +9,6 @@ export default StyleSheet.create({
   },
   viewEditor: {
     flex: 1,
-    backgroundColor: colors.background,
     paddingHorizontal: 20
   }
 });

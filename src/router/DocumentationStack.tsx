@@ -1,3 +1,4 @@
+import React from "react";
 import { createStackNavigator } from '@react-navigation/stack';
 import Documentation from '../feature/Documentation';
 
@@ -13,11 +14,6 @@ function DocumentationStack() {
         name="Documentation"
         component={Documentation}
         options={{ title: 'Documentation' }}
-      />
-      <Stack.Screen
-        name="Profile"
-        component={ProfileScreen}
-        initialParams={{ user: 'me' }}
       />
     </Stack.Navigator>
   );

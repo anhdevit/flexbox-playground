@@ -30,6 +30,7 @@ export default class EditorButton extends Component {
             marginLeft: 15
           }}
           disable
+          onPress={() => {}}
         />
       </View>
     );

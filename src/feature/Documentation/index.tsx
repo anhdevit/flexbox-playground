@@ -13,7 +13,7 @@ import HeaderTitle from '../../common/components/texts/HeaderTitle';
 import colors from '../../common/theme/colors';
 
 export default class App extends Component {
-  static navigationOptions = ({ navigation }) => ({
+  static navigationOptions = ({navigation} : { navigation: any }) => ({
     headerTitle: <HeaderTitle title="Documentation" />,
     headerLeft: <Menu navigation={navigation} />
   });
