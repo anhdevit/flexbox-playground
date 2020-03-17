@@ -1213,6 +1213,13 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.3.tgz#2ab0d5da2e5815f94b0b9d4b95d1e5f243ab2ca7"
   integrity sha512-KfRL3PuHmqQLOG+2tGpRO26Ctg+Cq1E01D2DMriKEATHgWLfeNDmq9e29Q9WIky0dQ3NPkd1mzYH8Lm936Z9qw==
 
+"@types/react-native-modal-dropdown@^0.6.1":
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/@types/react-native-modal-dropdown/-/react-native-modal-dropdown-0.6.2.tgz#22cce9d7db2897ed21af42f1cdfbdd7570d3f579"
+  integrity sha512-6YaeRathL9xd3mOSgQilfP3G9fHSef7cjSmEwbqtsRDhIDBf7xHaOtn/2fqjNMaV86dLvi2KsiXzvylEA99LYw==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-native@^0.61.20":
   version "0.61.20"
   resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.61.20.tgz#937d8ed9768bdfc982e785563c07b4905ba0fd1f"
