@@ -20,6 +20,7 @@
 		2DCD954D1E0B4F2C00145EB5 /* PlaygroundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* PlaygroundTests.m */; };
 		30F7D59AD4BC501DA3A71BC8 /* libPods-Playground.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6BCC78C5839E5D3392D10A /* libPods-Playground.a */; };
 		3D6E6AB0C2F4FDC3EB96A4BE /* libPods-Playground-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60EE8E8FD28BC2D2A897DC89 /* libPods-Playground-tvOS.a */; };
+		CCA97CCB242136FA00B32F78 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA97CCA242136FA00B32F78 /* libRNGestureHandler.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
 			remoteInfo = "Playground-tvOS";
+		};
+		CCA97CC6242136F100B32F78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCA97CC1242136F100B32F78 /* RNGestureHandler.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNGestureHandler;
+		};
+		CCA97CC8242136F100B32F78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCA97CC1242136F100B32F78 /* RNGestureHandler.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B5C32A36220C603B000FFB8D;
+			remoteInfo = "RNGestureHandler-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -62,6 +77,8 @@
 		9B3E02666CBF003A8091D055 /* libPods-Playground-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Playground-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D9324CBB3B9955F2FB9270D /* Pods-PlaygroundTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaygroundTests.release.xcconfig"; path = "Target Support Files/Pods-PlaygroundTests/Pods-PlaygroundTests.release.xcconfig"; sourceTree = "<group>"; };
 		A08FCE1323B61402AF7C9ED9 /* Pods-Playground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Playground.debug.xcconfig"; path = "Target Support Files/Pods-Playground/Pods-Playground.debug.xcconfig"; sourceTree = "<group>"; };
+		CCA97CC1242136F100B32F78 /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
+		CCA97CCA242136FA00B32F78 /* libRNGestureHandler.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRNGestureHandler.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC7EC12F07D8308355F85BB /* Pods-Playground-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Playground-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-Playground-tvOSTests/Pods-Playground-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -82,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCA97CCB242136FA00B32F78 /* libRNGestureHandler.a in Frameworks */,
 				30F7D59AD4BC501DA3A71BC8 /* libPods-Playground.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +157,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CCA97CCA242136FA00B32F78 /* libRNGestureHandler.a */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				FD6BCC78C5839E5D3392D10A /* libPods-Playground.a */,
@@ -161,13 +180,13 @@
 				64E441610D8EBDCE37102C77 /* Pods-PlaygroundTests.debug.xcconfig */,
 				9D9324CBB3B9955F2FB9270D /* Pods-PlaygroundTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				CCA97CC1242136F100B32F78 /* RNGestureHandler.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -194,6 +213,15 @@
 				00E356EE1AD99517003FC87E /* PlaygroundTests.xctest */,
 				2D02E47B1E0B4A5D006451C7 /* Playground-tvOS.app */,
 				2D02E4901E0B4A5D006451C7 /* Playground-tvOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CCA97CC2242136F100B32F78 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CCA97CC7242136F100B32F78 /* libRNGestureHandler.a */,
+				CCA97CC9242136F100B32F78 /* libRNGestureHandler-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -308,12 +336,19 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CCA97CC2242136F100B32F78 /* Products */;
+					ProjectRef = CCA97CC1242136F100B32F78 /* RNGestureHandler.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* Playground */,
@@ -323,6 +358,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CCA97CC7242136F100B32F78 /* libRNGestureHandler.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNGestureHandler.a;
+			remoteRef = CCA97CC6242136F100B32F78 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CCA97CC9242136F100B32F78 /* libRNGestureHandler-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRNGestureHandler-tvOS.a";
+			remoteRef = CCA97CC8242136F100B32F78 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		00E356EC1AD99517003FC87E /* Resources */ = {
