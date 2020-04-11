@@ -10,6 +10,10 @@ import React from 'react';
 import AppContainer from './src/router/AppContainer';
 import i18next from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import { configureFonts, DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
+import { Provider } from 'react-redux';
+import { configureStore } from '@reduxjs/toolkit';
+import rootReducer from './src/reducers'
 
 const languageDetector = {
   type: 'languageDetector',
@@ -35,9 +39,49 @@ i18next
     },
   });
 
+const fontConfig = {
+  default: {
+    regular: {
+      fontFamily: 'sans-serif',
+      fontWeight: 'normal',
+    },
+    medium: {
+      fontFamily: 'sans-serif-medium',
+      fontWeight: 'normal',
+    },
+    light: {
+      fontFamily: 'sans-serif-light',
+      fontWeight: 'normal',
+    },
+    thin: {
+      fontFamily: 'sans-serif-thin',
+      fontWeight: 'normal',
+    },
+  },
+};
+
+const theme = {
+  ...DefaultTheme,
+  fonts: configureFonts(fontConfig as any),
+  roundness: 2,
+  colors: {
+    ...DefaultTheme.colors,
+    primary: '#3498db',
+    accent: '#f1c40f',
+  },
+};
+
+const store = configureStore({
+  reducer: rootReducer
+})
+
 function App() {
   return (
-    <AppContainer />
+    <Provider store={store}>
+      <PaperProvider theme={theme}>
+        <AppContainer />
+      </PaperProvider>
+    </Provider>
   );
 };
 
