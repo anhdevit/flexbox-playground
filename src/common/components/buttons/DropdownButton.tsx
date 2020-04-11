@@ -1,6 +1,6 @@
 import React from 'react'
 import { Image, StyleSheet, Text, View } from 'react-native';
-import ModalDropdown from 'react-native-modal-dropdown';
+// import ModalDropdown from 'react-native-modal-dropdown';
 import colors from '../../theme/colors';
 import styleCommon from '../../theme/styles';
 import R from '@R/R';
@@ -14,17 +14,18 @@ export interface Props {
 
 const DropdownButton: React.FC<Props> = (props) => {
   return (
-    <ModalDropdown
-      options={props.option}
-      dropdownStyle={styles.styleDropdown}
-    >
-      <View
-        style={[styles.button, props.styleCustom, styleCommon.heightElement]}
-      >
-        <Text style={styles.text}>{props.title}</Text>
-        {<Image style={styles.image} source={R.images.ic_arrow_drop_down} />}
-      </View>
-    </ModalDropdown>
+    // <ModalDropdown
+    //   options={props.option}
+    //   dropdownStyle={styles.styleDropdown}
+    // >
+    //   <View
+    //     style={[styles.button, props.styleCustom, styleCommon.heightElement]}
+    //   >
+    //     <Text style={styles.text}>{props.title}</Text>
+    //     {<Image style={styles.image} source={R.images.ic_arrow_drop_down} />}
+    //   </View>
+    // </ModalDropdown>
+    null
   );
 }
 
