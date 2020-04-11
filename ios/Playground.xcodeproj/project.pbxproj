@@ -8,18 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* PlaygroundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* PlaygroundTests.m */; };
-		0A497621AD66845B67A8B194 /* libPods-PlaygroundTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FF849DA9D24340851219F48 /* libPods-PlaygroundTests.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		1B387178B13760A1DA3AFFF7 /* libPods-Playground-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B3E02666CBF003A8091D055 /* libPods-Playground-tvOSTests.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* PlaygroundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* PlaygroundTests.m */; };
 		30F7D59AD4BC501DA3A71BC8 /* libPods-Playground.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6BCC78C5839E5D3392D10A /* libPods-Playground.a */; };
 		3D6E6AB0C2F4FDC3EB96A4BE /* libPods-Playground-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60EE8E8FD28BC2D2A897DC89 /* libPods-Playground-tvOS.a */; };
+		CC8578DC2440E2D500501799 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8578DB2440E2D500501799 /* Dummy.swift */; };
+		CCA97CCB242136FA00B32F78 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA97CCA242136FA00B32F78 /* libRNGestureHandler.a */; };
+		D358127E621EF19EC24EA17D /* libPods-Playground-PlaygroundTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7986A0A80C53BD18FB9E92 /* libPods-Playground-PlaygroundTests.a */; };
+		EAC2B1A4FF2A9BD9465682C3 /* libPods-Playground-tvOS-Playground-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 018E70322891E4EBF3AFC15D /* libPods-Playground-tvOS-Playground-tvOSTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,20 @@
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
 			remoteInfo = "Playground-tvOS";
 		};
+		CCA97CC6242136F100B32F78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCA97CC1242136F100B32F78 /* RNGestureHandler.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNGestureHandler;
+		};
+		CCA97CC8242136F100B32F78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCA97CC1242136F100B32F78 /* RNGestureHandler.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B5C32A36220C603B000FFB8D;
+			remoteInfo = "RNGestureHandler-tvOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +60,7 @@
 		00E356EE1AD99517003FC87E /* PlaygroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlaygroundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* PlaygroundTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaygroundTests.m; sourceTree = "<group>"; };
+		018E70322891E4EBF3AFC15D /* libPods-Playground-tvOS-Playground-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Playground-tvOS-Playground-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* Playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Playground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Playground/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Playground/AppDelegate.m; sourceTree = "<group>"; };
@@ -53,15 +70,22 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Playground/main.m; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* Playground-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Playground-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* Playground-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Playground-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D7986A0A80C53BD18FB9E92 /* libPods-Playground-PlaygroundTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Playground-PlaygroundTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		596D1640E78165C1D4F622AC /* Pods-Playground-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Playground-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-Playground-tvOS/Pods-Playground-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		60EE8E8FD28BC2D2A897DC89 /* libPods-Playground-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Playground-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64E441610D8EBDCE37102C77 /* Pods-PlaygroundTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaygroundTests.debug.xcconfig"; path = "Target Support Files/Pods-PlaygroundTests/Pods-PlaygroundTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6C8969473B388589DF43581B /* Pods-Playground-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Playground-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Playground-tvOSTests/Pods-Playground-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		7FF849DA9D24340851219F48 /* libPods-PlaygroundTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PlaygroundTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B7C19A75FBDEA93220A79A /* Pods-Playground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Playground.release.xcconfig"; path = "Target Support Files/Pods-Playground/Pods-Playground.release.xcconfig"; sourceTree = "<group>"; };
-		9B3E02666CBF003A8091D055 /* libPods-Playground-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Playground-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95DEF6CD66051930814F0FFE /* Pods-Playground-PlaygroundTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Playground-PlaygroundTests.debug.xcconfig"; path = "Target Support Files/Pods-Playground-PlaygroundTests/Pods-Playground-PlaygroundTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9C3EDB8A2A2CFA67389EEE1D /* Pods-Playground-tvOS-Playground-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Playground-tvOS-Playground-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Playground-tvOS-Playground-tvOSTests/Pods-Playground-tvOS-Playground-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9D9324CBB3B9955F2FB9270D /* Pods-PlaygroundTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaygroundTests.release.xcconfig"; path = "Target Support Files/Pods-PlaygroundTests/Pods-PlaygroundTests.release.xcconfig"; sourceTree = "<group>"; };
 		A08FCE1323B61402AF7C9ED9 /* Pods-Playground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Playground.debug.xcconfig"; path = "Target Support Files/Pods-Playground/Pods-Playground.debug.xcconfig"; sourceTree = "<group>"; };
+		B8AB5B078468A6F6FF68E137 /* Pods-Playground-tvOS-Playground-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Playground-tvOS-Playground-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-Playground-tvOS-Playground-tvOSTests/Pods-Playground-tvOS-Playground-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		C379E428D011B35BD6AC6F69 /* Pods-Playground-PlaygroundTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Playground-PlaygroundTests.release.xcconfig"; path = "Target Support Files/Pods-Playground-PlaygroundTests/Pods-Playground-PlaygroundTests.release.xcconfig"; sourceTree = "<group>"; };
+		CC8578DA2440E2D400501799 /* Playground-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Playground-Bridging-Header.h"; sourceTree = "<group>"; };
+		CC8578DB2440E2D500501799 /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
+		CCA97CC1242136F100B32F78 /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
+		CCA97CCA242136FA00B32F78 /* libRNGestureHandler.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRNGestureHandler.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC7EC12F07D8308355F85BB /* Pods-Playground-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Playground-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-Playground-tvOSTests/Pods-Playground-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -74,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A497621AD66845B67A8B194 /* libPods-PlaygroundTests.a in Frameworks */,
+				D358127E621EF19EC24EA17D /* libPods-Playground-PlaygroundTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCA97CCB242136FA00B32F78 /* libRNGestureHandler.a in Frameworks */,
 				30F7D59AD4BC501DA3A71BC8 /* libPods-Playground.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,7 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B387178B13760A1DA3AFFF7 /* libPods-Playground-tvOSTests.a in Frameworks */,
+				EAC2B1A4FF2A9BD9465682C3 /* libPods-Playground-tvOS-Playground-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +157,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				CC8578DB2440E2D500501799 /* Dummy.swift */,
+				CC8578DA2440E2D400501799 /* Playground-Bridging-Header.h */,
 			);
 			name = Playground;
 			sourceTree = "<group>";
@@ -139,12 +166,13 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CCA97CCA242136FA00B32F78 /* libRNGestureHandler.a */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				FD6BCC78C5839E5D3392D10A /* libPods-Playground.a */,
 				60EE8E8FD28BC2D2A897DC89 /* libPods-Playground-tvOS.a */,
-				9B3E02666CBF003A8091D055 /* libPods-Playground-tvOSTests.a */,
-				7FF849DA9D24340851219F48 /* libPods-PlaygroundTests.a */,
+				4D7986A0A80C53BD18FB9E92 /* libPods-Playground-PlaygroundTests.a */,
+				018E70322891E4EBF3AFC15D /* libPods-Playground-tvOS-Playground-tvOSTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -160,14 +188,18 @@
 				ECC7EC12F07D8308355F85BB /* Pods-Playground-tvOSTests.release.xcconfig */,
 				64E441610D8EBDCE37102C77 /* Pods-PlaygroundTests.debug.xcconfig */,
 				9D9324CBB3B9955F2FB9270D /* Pods-PlaygroundTests.release.xcconfig */,
+				95DEF6CD66051930814F0FFE /* Pods-Playground-PlaygroundTests.debug.xcconfig */,
+				C379E428D011B35BD6AC6F69 /* Pods-Playground-PlaygroundTests.release.xcconfig */,
+				9C3EDB8A2A2CFA67389EEE1D /* Pods-Playground-tvOS-Playground-tvOSTests.debug.xcconfig */,
+				B8AB5B078468A6F6FF68E137 /* Pods-Playground-tvOS-Playground-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				CCA97CC1242136F100B32F78 /* RNGestureHandler.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -194,6 +226,15 @@
 				00E356EE1AD99517003FC87E /* PlaygroundTests.xctest */,
 				2D02E47B1E0B4A5D006451C7 /* Playground-tvOS.app */,
 				2D02E4901E0B4A5D006451C7 /* Playground-tvOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CCA97CC2242136F100B32F78 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CCA97CC7242136F100B32F78 /* libRNGestureHandler.a */,
+				CCA97CC9242136F100B32F78 /* libRNGestureHandler-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -292,6 +333,9 @@
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
+					13B07F861A680F5B00A75B9A = {
+						LastSwiftMigration = 1130;
+					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -308,12 +352,19 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CCA97CC2242136F100B32F78 /* Products */;
+					ProjectRef = CCA97CC1242136F100B32F78 /* RNGestureHandler.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* Playground */,
@@ -323,6 +374,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CCA97CC7242136F100B32F78 /* libRNGestureHandler.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNGestureHandler.a;
+			remoteRef = CCA97CC6242136F100B32F78 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CCA97CC9242136F100B32F78 /* libRNGestureHandler-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRNGestureHandler-tvOS.a";
+			remoteRef = CCA97CC8242136F100B32F78 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		00E356EC1AD99517003FC87E /* Resources */ = {
@@ -388,7 +456,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Playground-tvOSTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Playground-tvOS-Playground-tvOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -424,7 +492,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PlaygroundTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Playground-PlaygroundTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -529,6 +597,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				CC8578DC2440E2D500501799 /* Dummy.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -580,8 +649,9 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 64E441610D8EBDCE37102C77 /* Pods-PlaygroundTests.debug.xcconfig */;
+			baseConfigurationReference = 95DEF6CD66051930814F0FFE /* Pods-Playground-PlaygroundTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -590,6 +660,10 @@
 				INFOPLIST_FILE = PlaygroundTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DFB_SONARKIT_ENABLED=1",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -603,13 +677,18 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D9324CBB3B9955F2FB9270D /* Pods-PlaygroundTests.release.xcconfig */;
+			baseConfigurationReference = C379E428D011B35BD6AC6F69 /* Pods-Playground-PlaygroundTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = PlaygroundTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DFB_SONARKIT_ENABLED=1",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -626,10 +705,15 @@
 			baseConfigurationReference = A08FCE1323B61402AF7C9ED9 /* Pods-Playground.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				INFOPLIST_FILE = Playground/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DFB_SONARKIT_ENABLED=1",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -637,6 +721,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Playground;
+				SWIFT_OBJC_BRIDGING_HEADER = "Playground-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -646,9 +733,14 @@
 			baseConfigurationReference = 88B7C19A75FBDEA93220A79A /* Pods-Playground.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = Playground/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DFB_SONARKIT_ENABLED=1",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -656,6 +748,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Playground;
+				SWIFT_OBJC_BRIDGING_HEADER = "Playground-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -675,6 +769,10 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Playground-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DFB_SONARKIT_ENABLED=1",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -703,6 +801,10 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Playground-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DFB_SONARKIT_ENABLED=1",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -718,7 +820,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C8969473B388589DF43581B /* Pods-Playground-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 9C3EDB8A2A2CFA67389EEE1D /* Pods-Playground-tvOS-Playground-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -730,6 +832,10 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Playground-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DFB_SONARKIT_ENABLED=1",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -745,7 +851,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ECC7EC12F07D8308355F85BB /* Pods-Playground-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = B8AB5B078468A6F6FF68E137 /* Pods-Playground-tvOS-Playground-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -757,6 +863,10 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Playground-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DFB_SONARKIT_ENABLED=1",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
