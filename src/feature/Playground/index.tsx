@@ -9,6 +9,7 @@
 import React from 'react';
 import { SafeAreaView, StyleSheet, TouchableOpacity } from 'react-native';
 import colors from '../../common/theme/colors';
+import { FAB } from 'react-native-paper';
 
 export interface Props {
   navigation: any,
@@ -23,12 +24,18 @@ const Playground: React.FC<Props> = (props) => {
 
   return (
     <SafeAreaView style={styles.container}>
-    <TouchableOpacity style={styles.rootView}>
-      <TouchableOpacity style={styles.childView} />
-      <TouchableOpacity style={styles.childView} />
-      <TouchableOpacity style={styles.childView} />
-    </TouchableOpacity>
-  </SafeAreaView>
+      <TouchableOpacity style={styles.rootView}>
+        <TouchableOpacity style={styles.childView} />
+        <TouchableOpacity style={styles.childView} />
+        <TouchableOpacity style={styles.childView} />
+      </TouchableOpacity>
+      <FAB
+        style={styles.fab}
+        small
+        icon="plus"
+        onPress={() => console.log('Pressed')}
+      />
+    </SafeAreaView>
   );
 }
 
@@ -57,5 +64,11 @@ const styles = StyleSheet.create({
     height: 50,
     borderWidth: 1,
     borderColor: 'gray'
-  }
+  },
+  fab: {
+    position: 'absolute',
+    margin: 16,
+    right: 16,
+    bottom: 40,
+  },
 });
