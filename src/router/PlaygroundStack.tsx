@@ -2,7 +2,6 @@ import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
 import { IconButton } from 'react-native-paper';
 import Playground from '../feature/Playground';
-import Tab from '../feature/Tab';
 
 const Stack = createStackNavigator();
 
@@ -23,11 +22,6 @@ function PlaygroundStack() {
           onPress={() => navigation.toggleDrawer()}
           />,
         })}
-      />
-      <Stack.Screen
-        name="Tab"
-        component={Tab}
-        initialParams={{ user: 'Tab' }}
       />
     </Stack.Navigator>
   );
