@@ -1,7 +1,9 @@
-import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
+import React from 'react';
+import { IconButton } from 'react-native-paper';
 import Playground from '../feature/Playground';
-import Tab from '../feature/Tab';
+import { StyleSheet } from 'react-native';
+import colors from '@common/theme/colors';
 
 const Stack = createStackNavigator();
 
@@ -9,20 +11,30 @@ function PlaygroundStack() {
   return (
     <Stack.Navigator
       initialRouteName="Playground"
-      screenOptions={{ gestureEnabled: false }}
+      screenOptions={({ navigation, route }) => ({
+        headerTitleAlign: 'center',
+        headerStyle: styles.headerStyle,
+      })}
     >
       <Stack.Screen
         name="Playground"
         component={Playground}
-        options={{ title: 'Playground' }}
-      />
-      <Stack.Screen
-        name="Tab"
-        component={Tab}
-        initialParams={{ user: 'Tab' }}
+        options={({ navigation, route }) => ({
+          headerLeft: () => <IconButton 
+          icon="menu" 
+          onPress={() => navigation.toggleDrawer()}
+          />,
+        })}
       />
     </Stack.Navigator>
   );
 }
+
+const styles = StyleSheet.create({
+  headerStyle: {
+    backgroundColor: colors.primary
+  },
+});
+
 
 export default PlaygroundStack;
