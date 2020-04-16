@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-// import authReducer from '../features/auth/authSlice';
+import playgroundSlice from '../feature/Playground/playgroundSlice';
 // import { reducer as formReducer } from 'redux-form';
 
 export default combineReducers({
-//   auth: authReducer,
+  playground: playgroundSlice,
 //   form: formReducer
 })
