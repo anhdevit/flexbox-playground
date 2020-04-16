@@ -2,6 +2,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
 import { IconButton } from 'react-native-paper';
 import Playground from '../feature/Playground';
+import { StyleSheet } from 'react-native';
+import colors from '@common/theme/colors';
 
 const Stack = createStackNavigator();
 
@@ -9,9 +11,10 @@ function PlaygroundStack() {
   return (
     <Stack.Navigator
       initialRouteName="Playground"
-      screenOptions={{
-        gestureEnabled: false,
-      }}
+      screenOptions={({ navigation, route }) => ({
+        headerTitleAlign: 'center',
+        headerStyle: styles.headerStyle,
+      })}
     >
       <Stack.Screen
         name="Playground"
@@ -26,5 +29,12 @@ function PlaygroundStack() {
     </Stack.Navigator>
   );
 }
+
+const styles = StyleSheet.create({
+  headerStyle: {
+    backgroundColor: colors.primary
+  },
+});
+
 
 export default PlaygroundStack;
