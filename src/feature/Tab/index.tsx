@@ -7,19 +7,13 @@
  */
 
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, SafeAreaView } from 'react-native';
-import Action from './Action';
-import EditorTabbar from '../../router/EditorTabbar';
-import EditorButton from './EditorButton';
+import { SafeAreaView, StyleSheet } from 'react-native';
 import colors from '../../common/theme/colors';
-import Close from '../../common/components/buttons/Close';
-import HeaderTitle from '../../common/components/texts/HeaderTitle';
+import EditorTabbar from '../../router/EditorTabbar';
+import Action from './Action';
+import EditorButton from './EditorButton';
 
 export default class Tab extends Component {
-  static navigationOptions = ({navigation} : { navigation: any }) => ({
-    headerTitle: <HeaderTitle title="Editor" />,
-    headerLeft: <Close navigation={navigation} />
-  });
 
   render() {
     return (

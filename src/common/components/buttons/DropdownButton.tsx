@@ -3,7 +3,6 @@ import { Image, StyleSheet, Text, View } from 'react-native';
 // import ModalDropdown from 'react-native-modal-dropdown';
 import colors from '../../theme/colors';
 import styleCommon from '../../theme/styles';
-import R from '@R/R';
 
 export interface Props {
   option: any,

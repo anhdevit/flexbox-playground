@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Image, StyleSheet, TouchableOpacity } from 'react-native';
 import colors from '../../theme/colors';
-import R from '@R/R';
 
 export interface Props {
   navigation: any,
