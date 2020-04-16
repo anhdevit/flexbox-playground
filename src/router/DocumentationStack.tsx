@@ -1,6 +1,7 @@
 import React from "react";
 import { createStackNavigator } from '@react-navigation/stack';
 import Documentation from '../feature/Documentation';
+import { IconButton } from 'react-native-paper';
 
 const Stack = createStackNavigator();
 
@@ -13,7 +14,12 @@ function DocumentationStack() {
       <Stack.Screen
         name="Documentation"
         component={Documentation}
-        options={{ title: 'Documentation' }}
+        options={({ navigation, route }) => ({
+          headerLeft: () => <IconButton 
+          icon="menu" 
+          onPress={() => navigation.toggleDrawer()}
+          />,
+        })}
       />
     </Stack.Navigator>
   );
