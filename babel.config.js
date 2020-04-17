@@ -3,8 +3,16 @@ module.exports = {
   plugins: [
     [
       'module-resolver',
+      ['@babel/plugin-proposal-decorators', { legacy: true }],
       {
-        root: ['./src'],
+        root: ['./'],
+        alias: {
+          "*": ["./src"],
+          "test/*": ["./test/"],
+          '@common': './src/common',
+          '@feature': './src/feature',
+          '@router': './src/router',
+        },
         extensions: [
           '.ios.js', 
           '.android.js', 
@@ -18,10 +26,6 @@ module.exports = {
           '.android.tsx',
           '.jsx',
         ],
-        alias: {
-          "test/*": ["./test/"],
-          '@common': './src/common',
-        }
       }
     ]
   ]
