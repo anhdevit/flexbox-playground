@@ -28,8 +28,7 @@
     "react-native-screens": "^2.4.0",
     "react-native-tab-view": "^2.14.0",
     "react-native-vector-icons": "^6.6.0",
-    "react-redux": "^7.2.0",
-    "shortid": "^2.2.15"
+    "react-redux": "^7.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
