@@ -8,10 +8,9 @@
 
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import colors from '../../common/theme/colors';
+import colors from '@common/theme/colors';
 
 export interface Props {
-  navigation: any,
 }
 
 const SideBar: React.FC<Props> = (props) => {

@@ -32,7 +32,7 @@ function PlaygroundStack() {
 
 const styles = StyleSheet.create({
   headerStyle: {
-    backgroundColor: colors.primary
+    // backgroundColor: colors.primary
   },
 });
 

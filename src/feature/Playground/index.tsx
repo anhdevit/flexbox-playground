@@ -6,10 +6,10 @@
  * @flow
  */
 
+import colors from '@common/theme/colors';
 import React from 'react';
-import { SafeAreaView, StyleSheet, TouchableOpacity, View } from 'react-native';
-import colors from '../../common/theme/colors';
-import { FAB } from 'react-native-paper';
+import { SafeAreaView, StyleSheet, TouchableOpacity } from 'react-native';
+import SideBar from '../SideBar';
 
 export interface Props {
   navigation: any,
@@ -20,13 +20,7 @@ const Playground: React.FC<Props> = (props) => {
     <SafeAreaView style={styles.container}>
       <TouchableOpacity style={styles.rootView}>
       </TouchableOpacity>
-      <View style={styles.viewEditor}/>
-      <FAB
-        style={styles.fab}
-        small
-        icon="plus"
-        onPress={() => console.log('Pressed')}
-      />
+      <SideBar />
     </SafeAreaView>
   );
 }
@@ -36,12 +30,12 @@ export default Playground;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.background,
+    backgroundColor: colors.primary,
   },
   rootView: {
     borderWidth: 2,
     borderColor: colors.primary,
-    // flex: 1,
+    backgroundColor: colors.background,
     width: '100%',
     aspectRatio: 1,
   },

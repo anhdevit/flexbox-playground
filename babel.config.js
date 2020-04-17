@@ -21,6 +21,8 @@ module.exports = {
         alias: {
           "test/*": ["./test/"],
           '@common': './src/common',
+          '@router': './src/router',
+          '@feature': './src/feature',
         }
       }
     ]
