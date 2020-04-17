@@ -1,8 +1,8 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
+import { StyleSheet } from 'react-native';
 import { IconButton } from 'react-native-paper';
 import Playground from '../feature/Playground';
-import { StyleSheet } from 'react-native';
 import colors from '@common/theme/colors';
 
 const Stack = createStackNavigator();
@@ -32,7 +32,7 @@ function PlaygroundStack() {
 
 const styles = StyleSheet.create({
   headerStyle: {
-    // backgroundColor: colors.primary
+    backgroundColor: colors.primary
   },
 });
 

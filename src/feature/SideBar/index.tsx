@@ -7,23 +7,14 @@
  */
 
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import colors from '@common/theme/colors';
-
+import TabEditor from '@router/TabEditor';
 export interface Props {
 }
 
 const SideBar: React.FC<Props> = (props) => {
   return (
-      <View style={styles.container}/>
+    <TabEditor />
   );
 }
 
 export default SideBar;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: colors.background,
-  },
-});

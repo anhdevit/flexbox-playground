@@ -7,7 +7,7 @@
  */
 
 import React, { Component } from 'react';
-import { StyleSheet, Text, SafeAreaView } from 'react-native';
+import { SafeAreaView, StyleSheet, Text } from 'react-native';
 import colors from '@common/theme/colors';
 
 export default class App extends Component {

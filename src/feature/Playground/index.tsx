@@ -6,10 +6,10 @@
  * @flow
  */
 
-import colors from '@common/theme/colors';
 import React from 'react';
 import { SafeAreaView, StyleSheet, TouchableOpacity } from 'react-native';
 import SideBar from '../SideBar';
+import colors from '@common/theme/colors';
 
 export interface Props {
   navigation: any,
