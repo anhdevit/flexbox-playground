@@ -10,6 +10,7 @@ import React from 'react';
 import TabEditor from '@router/TabEditor';
 import { StyleSheet, View } from 'react-native';
 import { Button } from 'react-native-paper';
+import colors from '@common/theme/colors';
 
 export interface Props {
 }
@@ -35,7 +36,8 @@ export default SideBar;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+    backgroundColor: colors.primary,
   },
   footer: {
     flexDirection: 'row',
