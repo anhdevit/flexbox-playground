@@ -8,14 +8,18 @@
 
 import colors from '@common/theme/colors';
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, ScrollView } from 'react-native';
 
 export interface Props {
 }
 
 const Flex: React.FC<Props> = (props) => {
   return (
-      <View style={styles.container}/>
+      <View style={styles.container}>
+        <ScrollView>
+          
+        </ScrollView>
+      </View>
   );
 }
 
@@ -24,6 +28,6 @@ export default Flex;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.background,
+    backgroundColor: colors.primary,
   },
 });
