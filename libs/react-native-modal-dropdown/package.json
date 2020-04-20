@@ -1,0 +1,75 @@
+{
+  "_args": [
+    [
+      "react-native-modal-dropdown@0.7.0",
+      "/Users/anhdevit/Desktop/playground"
+    ]
+  ],
+  "_from": "react-native-modal-dropdown@0.7.0",
+  "_id": "react-native-modal-dropdown@0.7.0",
+  "_inBundle": false,
+  "_integrity": "sha512-h2UrozBByQhL56XDboj/wjc/5Ny787eLQ++4ql7TecBdbLqbf+tlE62VeXKz30XVMN3iUVYUR/XmM/RIwLIXEg==",
+  "_location": "/react-native-modal-dropdown",
+  "_phantomChildren": {
+    "create-react-class": "15.6.3",
+    "fbjs": "1.0.0",
+    "invariant": "2.2.4",
+    "react-clone-referenced-element": "1.1.0"
+  },
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "react-native-modal-dropdown@0.7.0",
+    "name": "react-native-modal-dropdown",
+    "escapedName": "react-native-modal-dropdown",
+    "rawSpec": "0.7.0",
+    "saveSpec": null,
+    "fetchSpec": "0.7.0"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-native-modal-dropdown/-/react-native-modal-dropdown-0.7.0.tgz",
+  "_spec": "0.7.0",
+  "_where": "/Users/anhdevit/Desktop/playground",
+  "author": {
+    "name": "sohobloo",
+    "email": "sohobloo@live.cn",
+    "url": "https://github.com/sohobloo"
+  },
+  "bugs": {
+    "url": "https://github.com/sohobloo/react-native-modal-dropdown/issues",
+    "email": "sohobloo@live.cn"
+  },
+  "dependencies": {
+    "deprecated-react-native-listview": "0.0.5",
+    "prop-types": "^15.6.0"
+  },
+  "description": "A react-native dropdown component for both iOS and Android.",
+  "homepage": "https://github.com/sohobloo/react-native-modal-dropdown",
+  "keywords": [
+    "react",
+    "react-component",
+    "react-native",
+    "react-native-component",
+    "ios",
+    "android",
+    "modal",
+    "dropdown",
+    "picker",
+    "select",
+    "selector",
+    "option"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "react-native-modal-dropdown",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sohobloo/react-native-modal-dropdown.git"
+  },
+  "scripts": {
+    "test": "echo \"no test specified\" && exit 0"
+  },
+  "version": "0.7.0"
+}
