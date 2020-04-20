@@ -27,11 +27,11 @@ export default function TabEditor() {
         backBehavior='none'
       >
         <Tab.Screen
-          name="Giới thiệu"
+          name="Flex"
           component={Flex}
         />
-        <Tab.Screen name="Tiện ích" component={Alignment} />
-        <Tab.Screen name="Thiết kế" component={Layout} />
+        <Tab.Screen name="Alignment" component={Alignment} />
+        <Tab.Screen name="Layout" component={Layout} />
       </Tab.Navigator>
   );
 }

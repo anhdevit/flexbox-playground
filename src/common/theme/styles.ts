@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-export default StyleSheet.create({
+const stylesCommon = StyleSheet.create({
   elementEditor: {
     marginTop: 20
   },
@@ -12,3 +12,4 @@ export default StyleSheet.create({
     paddingHorizontal: 20
   }
 });
+export default stylesCommon
