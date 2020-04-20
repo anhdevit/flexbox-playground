@@ -6,48 +6,59 @@
  * @flow
  */
 
+import ElementChoose from '@common/components/element-editor/ElementChoose';
+import ElementDropdown from '@common/components/element-editor/ElementDropdown';
+import ElementInput from '@common/components/element-editor/ElementInput';
+import { flex } from '@common/constants/flex-box';
 import colors from '@common/theme/colors';
-import React, { useState } from 'react';
-import { StyleSheet, View, ScrollView } from 'react-native';
-import { Button, Paragraph, Menu, Divider, Provider } from 'react-native-paper';
+import stylesCommon from '@common/theme/styles';
+import React from 'react';
+import { ScrollView, StyleSheet, View } from 'react-native';
 
 export interface Props {
 }
 
 const Flex: React.FC<Props> = (props) => {
-  const [visible, setVisible] = useState(false)
 
-  const _openMenu = () => setVisible(true);
-
-  const _closeMenu = () => setVisible(false);
+  const { direction, flexDirection, basis, grow, shrink, flexWrap } = flex;
 
   return (
-    <View style={styles.container}>
-      <ScrollView>
-        <View
-          style={{
-            paddingTop: 50,
-            flexDirection: 'row',
-            justifyContent: 'center'
-          }}>
-          <Menu
-            visible={visible}
-            onDismiss={_closeMenu}
-            anchor={
-              <Button 
-              onPress={_openMenu}
-              color={'red'}
-              >Show menu</Button>
-            }
-          >
-            <Menu.Item onPress={() => { }} title="Item 1" />
-            <Menu.Item onPress={() => { }} title="Item 2" />
-            <Divider />
-            <Menu.Item onPress={() => { }} title="Item 3" />
-          </Menu>
-        </View>
-      </ScrollView>
+    <ScrollView style={stylesCommon.viewEditor}>
+    <ElementChoose
+      title={direction.title}
+      data={direction.value}
+      style={[stylesCommon.elementEditor]}
+    />
+
+    <ElementDropdown
+      title={flexDirection.title}
+      value={flexDirection.value[0]}
+      option={flexDirection.value}
+      style={[stylesCommon.elementEditor]}
+    />
+    <View style={styles.viewRow}>
+      <ElementInput
+        title={basis.title}
+        defaultValue={basis.defaultValue}
+        style={{ flex: 1 }}
+      />
+      <ElementInput
+        title={grow.title}
+        defaultValue={grow.defaultValue.toString()}
+        style={{ flex: 1 }}
+      />
+      <ElementInput
+        title={shrink.title}
+        defaultValue={shrink.defaultValue.toString()}
+        style={{ flex: 1 }}
+      />
     </View>
+    <ElementChoose
+      title={flexWrap.title}
+      data={flexWrap.value}
+      style={[stylesCommon.elementEditor]}
+    />
+  </ScrollView>
   );
 }
 
@@ -56,6 +67,11 @@ export default Flex;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.primary,
+    backgroundColor: colors.background,
+    paddingHorizontal: 20
   },
+  viewRow: {
+    flexDirection: 'row',
+    marginTop: 20
+  }
 });
