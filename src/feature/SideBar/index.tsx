@@ -11,6 +11,7 @@ import TabEditor from '@router/TabEditor';
 import { StyleSheet, View } from 'react-native';
 import { Button } from 'react-native-paper';
 import colors from '@common/theme/colors';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 export interface Props {
 }
@@ -18,8 +19,9 @@ export interface Props {
 const SideBar: React.FC<Props> = (props) => {
   return (
     <View style={styles.container}>
-      <TabEditor />
-
+      <KeyboardAwareScrollView>
+        <TabEditor />
+      </KeyboardAwareScrollView>
       <View style={styles.footer} >
         <Button icon="plus" mode="contained" onPress={() => console.log('Pressed')}>
           add child node
