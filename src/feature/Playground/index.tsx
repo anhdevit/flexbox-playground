@@ -7,9 +7,11 @@
  */
 
 import React from 'react';
-import { SafeAreaView, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import SideBar from '../SideBar';
 import colors from '@common/theme/colors';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import { heightPercentageToDP as hp, widthPercentageToDP as wp } from 'react-native-responsive-screen';
 
 export interface Props {
   navigation: any,
@@ -17,11 +19,12 @@ export interface Props {
 
 const Playground: React.FC<Props> = (props) => {
   return (
-    <SafeAreaView style={styles.container}>
+    <KeyboardAwareScrollView>
       <TouchableOpacity style={styles.rootView}>
       </TouchableOpacity>
-      <SideBar />
-    </SafeAreaView>
+        <SideBar />
+    </KeyboardAwareScrollView>
+
   );
 }
 
@@ -49,4 +52,7 @@ const styles = StyleSheet.create({
     right: 16,
     bottom: 40,
   },
+  sidebar: {
+    marginTop: hp('50%')
+  }
 });

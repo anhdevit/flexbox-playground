@@ -25,6 +25,7 @@
     "react-native-keyboard-aware-scroll-view": "^0.9.1",
     "react-native-paper": "^3.8.0",
     "react-native-reanimated": "^1.8.0",
+    "react-native-responsive-screen": "^1.4.1",
     "react-native-safe-area-context": "^0.7.3",
     "react-native-screens": "^2.4.0",
     "react-native-tab-view": "^2.14.0",
