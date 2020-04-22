@@ -18,6 +18,7 @@
 		30F7D59AD4BC501DA3A71BC8 /* libPods-Playground.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6BCC78C5839E5D3392D10A /* libPods-Playground.a */; };
 		3D6E6AB0C2F4FDC3EB96A4BE /* libPods-Playground-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60EE8E8FD28BC2D2A897DC89 /* libPods-Playground-tvOS.a */; };
 		CC8578DC2440E2D500501799 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8578DB2440E2D500501799 /* Dummy.swift */; };
+		CCA97CCB242136FA00B32F78 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA97CCA242136FA00B32F78 /* libRNGestureHandler.a */; };
 		CCC57C052444DF3C00795D9C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		D358127E621EF19EC24EA17D /* libPods-Playground-PlaygroundTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7986A0A80C53BD18FB9E92 /* libPods-Playground-PlaygroundTests.a */; };
 		EAC2B1A4FF2A9BD9465682C3 /* libPods-Playground-tvOS-Playground-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 018E70322891E4EBF3AFC15D /* libPods-Playground-tvOS-Playground-tvOSTests.a */; };
@@ -37,6 +38,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
 			remoteInfo = "Playground-tvOS";
+		};
+		CCA97CC6242136F100B32F78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCA97CC1242136F100B32F78 /* RNGestureHandler.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNGestureHandler;
+		};
+		CCA97CC8242136F100B32F78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCA97CC1242136F100B32F78 /* RNGestureHandler.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B5C32A36220C603B000FFB8D;
+			remoteInfo = "RNGestureHandler-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -82,6 +97,8 @@
 		CB03479A4BC4483A9222A9B8 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		CC8578DA2440E2D400501799 /* Playground-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Playground-Bridging-Header.h"; sourceTree = "<group>"; };
 		CC8578DB2440E2D500501799 /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
+		CCA97CC1242136F100B32F78 /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
+		CCA97CCA242136FA00B32F78 /* libRNGestureHandler.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRNGestureHandler.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCC57BDE2444D24700795D9C /* Fontisto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fontisto.ttf; sourceTree = "<group>"; };
 		CCC57BDF2444D24700795D9C /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
 		CCC57BE02444D24700795D9C /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Feather.ttf; sourceTree = "<group>"; };
@@ -121,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCA97CCB242136FA00B32F78 /* libRNGestureHandler.a in Frameworks */,
 				30F7D59AD4BC501DA3A71BC8 /* libPods-Playground.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,6 +232,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				CCA97CC1242136F100B32F78 /* RNGestureHandler.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -266,6 +285,15 @@
 				6B5F171F34D84AA5ADEA4F34 /* Zocial.ttf */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		CCA97CC2242136F100B32F78 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CCA97CC7242136F100B32F78 /* libRNGestureHandler.a */,
+				CCA97CC9242136F100B32F78 /* libRNGestureHandler-tvOS.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		CCC57BDD2444D24700795D9C /* Fonts */ = {
@@ -415,6 +443,10 @@
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = CCA97CC2242136F100B32F78 /* Products */;
+					ProjectRef = CCA97CC1242136F100B32F78 /* RNGestureHandler.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -427,6 +459,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		CCA97CC7242136F100B32F78 /* libRNGestureHandler.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNGestureHandler.a;
+			remoteRef = CCA97CC6242136F100B32F78 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		CCA97CC9242136F100B32F78 /* libRNGestureHandler-tvOS.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -812,9 +851,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Playground.app/Playground";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-				);
 			};
 			name = Debug;
 		};
@@ -840,9 +876,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Playground.app/Playground";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-				);
 			};
 			name = Release;
 		};
@@ -871,9 +904,6 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-				);
 			};
 			name = Debug;
 		};
@@ -900,9 +930,6 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "Playground-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-				);
 			};
 			name = Release;
 		};
@@ -935,9 +962,6 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-				);
 			};
 			name = Debug;
 		};
@@ -970,9 +994,6 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-				);
 			};
 			name = Release;
 		};
@@ -1004,9 +1025,6 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Playground-tvOS.app/Playground-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-				);
 			};
 			name = Debug;
 		};
@@ -1038,9 +1056,6 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Playground-tvOS.app/Playground-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-				);
 			};
 			name = Release;
 		};

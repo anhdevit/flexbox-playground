@@ -18,7 +18,7 @@ import rootReducer from './src/reducers'
 const languageDetector = {
   type: 'languageDetector',
   async: true,
-  detect: (cb: any) => cb('en'),
+  detect: cb => cb('en'),
   init: () => { },
   cacheUserLanguage: () => { },
 };
