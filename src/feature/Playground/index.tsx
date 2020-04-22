@@ -31,10 +31,6 @@ const Playground: React.FC<Props> = (props) => {
 export default Playground;
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: colors.primary,
-  },
   rootView: {
     borderWidth: 2,
     borderColor: colors.primary,
@@ -42,17 +38,4 @@ const styles = StyleSheet.create({
     width: '100%',
     aspectRatio: 1,
   },
-  viewEditor: {
-    flex: 1,
-    backgroundColor: colors.primary
-  },
-  fab: {
-    position: 'absolute',
-    margin: 16,
-    right: 16,
-    bottom: 40,
-  },
-  sidebar: {
-    marginTop: hp('50%')
-  }
 });
