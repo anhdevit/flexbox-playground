@@ -6,27 +6,22 @@
  * @flow
  */
 
-import React from 'react';
-import { View, StyleSheet, TouchableOpacity } from 'react-native';
-import SideBar from '../SideBar';
 import colors from '@common/theme/colors';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import React from 'react';
+import { StyleSheet, TouchableOpacity } from 'react-native';
+
 export interface Props {
   navigation: any,
 }
 
-const Playground: React.FC<Props> = (props) => {
+const Element: React.FC<Props> = (props) => {
   return (
-      <KeyboardAwareScrollView bounces={false}>
         <TouchableOpacity style={styles.rootView}>
         </TouchableOpacity>
-        <SideBar />
-      </KeyboardAwareScrollView>
   );
 }
 
-export default Playground;
+export default Element;
 
 const styles = StyleSheet.create({
   rootView: {
