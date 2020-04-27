@@ -15,9 +15,9 @@ export default function TabEditor() {
           backgroundColor: 'white'
         }}
         tabBarOptions={{
-          activeTintColor: colors.primary,
+          // activeTintColor: colors.primary,
           indicatorStyle: {
-            backgroundColor: colors.primary
+            // backgroundColor: colors.primary
           },
           inactiveTintColor: '#242424',
           style: {

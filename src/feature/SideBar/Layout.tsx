@@ -6,15 +6,14 @@
  * @flow
  */
 
-import React from 'react';
-import { StyleSheet, ScrollView } from 'react-native';
-import colors from '@common/theme/colors';
-import { layout } from '@common/constants/flex-box';
-import ElementDoubleInput from '@common/components/element-editor/ElementDoubleInput';
-import stylesCommon from '@common/theme/styles';
-import ElementInput from '@common/components/element-editor/ElementInput';
-import ElementFourInput from '@common/components/element-editor/ElementFourInput';
 import ElementChoose from '@common/components/element-editor/ElementChoose';
+import ElementDoubleInput from '@common/components/element-editor/ElementDoubleInput';
+import ElementFourInput from '@common/components/element-editor/ElementFourInput';
+import ElementInput from '@common/components/element-editor/ElementInput';
+import { layout } from '@common/constants/flex-box';
+import stylesCommon from '@common/theme/styles';
+import React from 'react';
+import { ScrollView } from 'react-native';
 
 export interface Props {
 }
@@ -102,10 +101,3 @@ const Layout: React.FC<Props> = (props) => {
 }
 
 export default Layout;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: colors.primary,
-  },
-});
