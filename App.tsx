@@ -14,6 +14,7 @@ import { configureFonts, DefaultTheme, Provider as PaperProvider } from 'react-n
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 import rootReducer from './src/reducers'
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 const languageDetector = {
   type: 'languageDetector',
@@ -78,7 +79,7 @@ function App() {
   return (
     <Provider store={store}>
       <PaperProvider theme={theme}>
-        <AppContainer />
+          <AppContainer />
       </PaperProvider>
     </Provider>
   );
