@@ -31,7 +31,6 @@ export const store = configureStore({
     //   ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER]
     // },
     thunk: {
-      // extraArgument: myCustomApiService
     }
   })
 })
