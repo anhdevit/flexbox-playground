@@ -17,8 +17,8 @@ import { ThunkAction } from 'redux-thunk'
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
-  whitelist: ['auth',], //Things u want to persist
-  blacklist: ['form', 'search', 'checkout', 'board'], //Things u dont
+  whitelist: ['',], //Things u want to persist
+  blacklist: ['form'], //Things u dont
 }
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)
