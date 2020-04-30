@@ -15,8 +15,6 @@ import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 import rootReducer from './src/reducers'
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { store, persistor } from './src/reducers/store';
-import { PersistGate } from 'redux-persist/integration/react'
 
 const languageDetector = {
   type: 'languageDetector',
@@ -73,14 +71,16 @@ const theme = {
   },
 };
 
+const store = configureStore({
+  reducer: rootReducer
+})
+
 function App() {
   return (
     <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <PaperProvider theme={theme}>
+      <PaperProvider theme={theme}>
           <AppContainer />
-        </PaperProvider>
-      </PersistGate>
+      </PaperProvider>
     </Provider>
   );
 };
