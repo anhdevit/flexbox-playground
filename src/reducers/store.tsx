@@ -17,22 +17,19 @@ import { ThunkAction } from 'redux-thunk'
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
-  whitelist: ['auth',], //Things u want to persist
-  blacklist: ['form', 'search', 'checkout', 'board'], //Things u dont
+  whitelist: ['',], //Things u want to persist
+  blacklist: ['form'], //Things u dont
 }
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 export const store = configureStore({
   reducer: persistedReducer,
-  middleware: getDefaultMiddleware({
-    serializableCheck: false,
-    // serializableCheck: {
-    //   ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER]
-    // },
-    thunk: {
-    }
-  })
+  // middleware: getDefaultMiddleware({
+  //   serializableCheck: false,
+  //   thunk: {
+  //   }
+  // })
 })
 
 export let persistor = persistStore(store)
