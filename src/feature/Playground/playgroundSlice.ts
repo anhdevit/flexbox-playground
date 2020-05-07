@@ -1,48 +1,25 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const authSlice = createSlice({
+const playgroundSlice = createSlice({
   name: 'auth',
   initialState: {
-    isLoading: true,
-    isUseLogin: false,
-    userToken: null,
-    isUserGuest: false
+    children: [],
+    stylesChildren: {},
+    elementIsSelect: null
   },
   reducers: {
-    signIn: {
+    setStyleChildren: {
       reducer(state, action) {
-        const { token } = action.payload;
-        state.userToken = token
-        state.isLoading = false
-        state.isUseLogin = true
+        const { id, style } = action.payload;
+        state.stylesChildren[id] = style
       },
-      prepare(token) {
-        return { payload: { token } }
+      prepare(id, style) {
+        return { payload: { id, style } }
       }
     },
-    skipAuth(state, action) {
-      state.isUserGuest = true;
-      state.isUseLogin = false;
-      state.userToken = null;
-    },
-    signout(state, action) {
-      state.isUseLogin=false
-      state.userToken = null
-      state.isUserGuest = false;
-    },
-    restore: {
-      reducer(state, action) {
-        const { token } = action.payload
-        state.userToken = token;
-      },
-      prepare(token) {
-        return { payload: { token } }
-      }
-    },
-
   }
 })
 
-export const { signIn, signout, restore, skipAuth } = authSlice.actions
+export const { setStyleChildren } = playgroundSlice.actions
 
-export default authSlice.reducer
+export default playgroundSlice.reducer
