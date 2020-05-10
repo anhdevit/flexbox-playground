@@ -33,23 +33,19 @@ const Element: React.FC<Props> = (props) => {
     indexElement,
     style
   } = props
-  console.log("props", props)
   console.log("id", id)
-  console.log("dataChildren=================", dataChildren)
 
+  console.log("elementIsSelect", elementIsSelect)
 
   return (
     <TouchableOpacity
-      style={[style, { borderColor: elementIsSelect === id ? colors.primary : 'gray' }]}
-      onPress={() => {
-        console.log("selectElement", props.selectElement)
-        // selectElement(id.toString())
-      }}
+      style={[style, { borderColor: elementIsSelect === id.toString() ? colors.primary : 'gray' }]}
+      onPress={() => selectElement(id.toString())}
     >
       {
         typeof dataChildren === 'object' ? dataChildren.map((item, index) => {
-          console.log("dataChildren[indexElement][index]", dataChildren[item])
-          return <Element
+          console.log("dataChildren[indexElement][index]", item)
+          return <ElementConenct
             key={index}
             id={item}
             dataChildren={dataChildren[item]}
@@ -74,7 +70,7 @@ const mapDispatch = {
   selectElement
 }
 
-export default connect(
+export const ElementConenct = connect(
   mapStateToProps,
   mapDispatch
 )(Element);

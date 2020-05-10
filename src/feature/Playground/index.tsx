@@ -8,12 +8,12 @@
 
 import colors from '@common/theme/colors';
 import React from 'react';
-import { StyleSheet, TouchableOpacity } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-import SideBar from '../SideBar';
 import { connect } from 'react-redux';
+import SideBar from '../SideBar';
+import { ElementConenct } from './Element';
 import { addNode, removeNode } from './playgroundSlice';
-import Element from './Element';
 export interface Props {
   navigation: any,
   dataChildren: {},
@@ -24,11 +24,12 @@ const Playground: React.FC<Props> = (props) => {
   const { dataChildren, stylesChildren } = props;
   return (
     <KeyboardAwareScrollView>
-      <Element
+      <ElementConenct
         id={0}
         dataChildren={dataChildren}
         indexElement={0}
         style={stylesChildren['0']} 
+
       />
       <SideBar />
     </KeyboardAwareScrollView>
