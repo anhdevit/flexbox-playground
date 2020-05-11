@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, Text } from 'react-native';
 import { connect } from 'react-redux';
 import { setChildren, selectElement } from './playgroundSlice';
 import colors from '@common/theme/colors';
@@ -33,6 +33,7 @@ const Element: React.FC<Props> = (props) => {
     indexElement,
     style
   } = props
+  console.log("props", props)
   console.log("id", id)
 
   console.log("elementIsSelect", elementIsSelect)

@@ -25,11 +25,10 @@ const Playground: React.FC<Props> = (props) => {
   return (
     <KeyboardAwareScrollView>
       <ElementConenct
-        id={0}
+        id={'root'}
         dataChildren={dataChildren}
-        indexElement={0}
-        style={stylesChildren['0']} 
-
+        indexElement={'root'}
+        style={stylesChildren['root']} 
       />
       <SideBar />
     </KeyboardAwareScrollView>
@@ -52,13 +51,3 @@ export default connect(
   mapStateToProps,
   mapDispatch
 )(Playground);
-
-const styles = StyleSheet.create({
-  rootView: {
-    borderWidth: 2,
-    borderColor: colors.primary,
-    backgroundColor: colors.background,
-    width: '100%',
-    aspectRatio: 1,
-  },
-});

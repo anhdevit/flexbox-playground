@@ -1,40 +1,47 @@
 import { createSlice } from '@reduxjs/toolkit';
 import colors from '@common/theme/colors';
+import {StyleSheet} from 'react-native'
 
-const styleNewElement = {
-  width:100,
-  borderWidth: 2,
-  backgroundColor: 'red',
-  aspectRatio: 1,
-}
+export const styles = StyleSheet.create({
+  styleNewElement: {
+    width:100,
+    borderWidth: 1,
+    aspectRatio: 1,
+    flexDirection: 'row'
+  }, 
+  root: {
+      borderWidth: 1,
+      backgroundColor: colors.background,
+      width: '100%',
+      aspectRatio: 1,
+      flexDirection: 'row'
+  }
+})
 
 const playgroundSlice = createSlice({
   name: 'playground',
   initialState: {
-    dataChildren: [['0.0'], ['1.0']],
+    dataChildren: [1, 2],
     stylesChildren: {
-      '0': {
-        borderWidth: 2,
-        backgroundColor: colors.background,
-        width: '100%',
-        aspectRatio: 1,
-      },
-      '0.0': styleNewElement,
-      '1.0': styleNewElement
+      'root': styles.root,
+      1: styles.styleNewElement,
+      2: styles.styleNewElement,
     },
-    elementIsSelect: '0',
+    elementIsSelect: 'root',
   },
   reducers: {
     setChildren(state, action) {
       state.children = action.payload
     },
     removeNode(state, action) {
-      state.children = action.payload
+      const lastItem = state.dataChildren[state.dataChildren.length - 1]
+      state.dataChildren.pop()
+      delete state.stylesChildren[lastItem]
     },
     addNode(state, action) {
-      state.children = action.payload
-      const level = state.elementIsSelect.split('.')
-      console.log('addNode',state.dataChildren.toString() );
+      const lastItem = state.dataChildren[state.dataChildren.length - 1]
+      state.dataChildren.push(lastItem + 1)
+      state.stylesChildren[lastItem + 1] = styles.styleNewElement
       // state.dataChildren[]
     },
     setStyleChildren: {
@@ -63,3 +70,5 @@ const playgroundSlice = createSlice({
 export const { setStyleChildren, setChildren, selectElement, addNode, removeNode } = playgroundSlice.actions
 
 export default playgroundSlice.reducer
+
+
