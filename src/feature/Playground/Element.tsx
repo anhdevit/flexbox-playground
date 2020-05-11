@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import { TouchableOpacity, Text } from 'react-native';
+import { TouchableOpacity, View, Text, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
 import { setChildren, selectElement } from './playgroundSlice';
 import colors from '@common/theme/colors';
@@ -43,6 +43,11 @@ const Element: React.FC<Props> = (props) => {
       style={[style, { borderColor: elementIsSelect === id.toString() ? colors.primary : 'gray' }]}
       onPress={() => selectElement(id.toString())}
     >
+      <View
+        style={styles.container}
+      >
+        <Text>{id}</Text>
+      </View>
       {
         typeof dataChildren === 'object' ? dataChildren.map((item, index) => {
           console.log("dataChildren[indexElement][index]", item)
@@ -58,6 +63,14 @@ const Element: React.FC<Props> = (props) => {
     </TouchableOpacity>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    ...StyleSheet.absoluteFill,
+  }
+})
 
 const mapStateToProps = (state, ownProps) => {
   return ({
