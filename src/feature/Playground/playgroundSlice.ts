@@ -4,9 +4,10 @@ import {StyleSheet} from 'react-native'
 
 export const styles = StyleSheet.create({
   styleNewElement: {
-    width:100,
+    maxWidth:100,
+    maxHeight:100,
+    flex: 1,
     borderWidth: 1,
-    aspectRatio: 1,
     flexDirection: 'row'
   }, 
   root: {
