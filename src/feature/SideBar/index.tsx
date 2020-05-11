@@ -25,7 +25,7 @@ const SideBar: React.FC<Props> = (props) => {
 
   return (
     <View style={styles.container}>
-      {/* <TabEditor /> */}
+      <TabEditor />
       <View style={styles.footer}>
         <Button icon="plus" mode="contained" onPress={() => addNode()}>
           add child node
