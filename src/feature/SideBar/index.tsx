@@ -30,7 +30,18 @@ const SideBar: React.FC<Props> = (props) => {
         <Button icon="plus" mode="contained" onPress={() => addNode()}>
           add child node
         </Button>
-        <Button icon="minus" mode="contained" onPress={() => removeNode()}>
+        <Button
+          icon="minus"
+          mode="contained"
+          onPress={() => removeNode()}
+          style={{
+            backgroundColor: 'gray'
+          }}
+          labelStyle={{
+            color: 'white'
+          }}
+          color={'red'}
+        >
           remove node
         </Button>
       </View>
