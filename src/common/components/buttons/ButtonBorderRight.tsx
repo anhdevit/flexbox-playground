@@ -1,6 +1,7 @@
-import React from 'react'
-import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 import colors from '@common/theme/colors';
+import React from 'react';
+import { StyleSheet } from 'react-native';
+import { Button } from 'react-native-paper';
 
 export interface Props {
   onPress?: any,
@@ -9,9 +10,10 @@ export interface Props {
 
 const ButtonBorderRight: React.FC<Props> = (props) => {
   return (
-    <TouchableOpacity style={styles.button} onPress={props.onPress}>
-      <Text style={styles.text}>{props.title}</Text>
-    </TouchableOpacity>
+    <Button
+      style={styles.button}
+      onPress={props.onPress}
+    >{props.title}</Button>
   );
 }
 

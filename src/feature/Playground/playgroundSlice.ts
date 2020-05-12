@@ -1,48 +1,75 @@
 import { createSlice } from '@reduxjs/toolkit';
+import colors from '@common/theme/colors';
+import {StyleSheet} from 'react-native'
 
-const authSlice = createSlice({
-  name: 'auth',
-  initialState: {
-    isLoading: true,
-    isUseLogin: false,
-    userToken: null,
-    isUserGuest: false
-  },
-  reducers: {
-    signIn: {
-      reducer(state, action) {
-        const { token } = action.payload;
-        state.userToken = token
-        state.isLoading = false
-        state.isUseLogin = true
-      },
-      prepare(token) {
-        return { payload: { token } }
-      }
-    },
-    skipAuth(state, action) {
-      state.isUserGuest = true;
-      state.isUseLogin = false;
-      state.userToken = null;
-    },
-    signout(state, action) {
-      state.isUseLogin=false
-      state.userToken = null
-      state.isUserGuest = false;
-    },
-    restore: {
-      reducer(state, action) {
-        const { token } = action.payload
-        state.userToken = token;
-      },
-      prepare(token) {
-        return { payload: { token } }
-      }
-    },
-
+export const styles = StyleSheet.create({
+  styleNewElement: {
+    maxWidth:100,
+    maxHeight:100,
+    flex: 1,
+    borderWidth: 1,
+    flexDirection: 'row'
+  }, 
+  root: {
+      borderWidth: 1,
+      backgroundColor: colors.background,
+      width: '100%',
+      aspectRatio: 1,
+      flexDirection: 'row'
   }
 })
 
-export const { signIn, signout, restore, skipAuth } = authSlice.actions
+const playgroundSlice = createSlice({
+  name: 'playground',
+  initialState: {
+    dataChildren: [1, 2],
+    stylesChildren: {
+      'root': styles.root,
+      1: styles.styleNewElement,
+      2: styles.styleNewElement,
+    },
+    elementIsSelect: 'root',
+  },
+  reducers: {
+    setChildren(state, action) {
+      state.children = action.payload
+    },
+    removeNode(state, action) {
+      const lastItem = state.dataChildren[state.dataChildren.length - 1]
+      state.dataChildren.pop()
+      delete state.stylesChildren[lastItem]
+    },
+    addNode(state, action) {
+      const lastItem = state.dataChildren[state.dataChildren.length - 1]
+      state.dataChildren.push(lastItem + 1)
+      state.stylesChildren[lastItem + 1] = styles.styleNewElement
+      // state.dataChildren[]
+    },
+    setStyleChildren: {
+      reducer(state, action) {
+        const { id, style } = action.payload;
+        state.stylesChildren[id] = style
+      },
+      prepare(id, style) {
+        return { payload: { id, style } }
+      }
+    },
+    selectElement: {
+      reducer(state, action) {
+        const { id } = action.payload;
+        state.elementIsSelect = id
+      },
+      prepare(id) {
+        return {
+          payload: { id }
+        }
+      }
+    }
+  }
+})
 
-export default authSlice.reducer
+export const { setStyleChildren, setChildren, selectElement, addNode, removeNode } = playgroundSlice.actions
+
+export default playgroundSlice.reducer
+
+
