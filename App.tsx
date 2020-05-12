@@ -17,6 +17,7 @@ import rootReducer from './src/reducers'
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { store, persistor } from './src/reducers/store';
 import { PersistGate } from 'redux-persist/integration/react'
+import { SafeAreaView } from 'react-native'
 
 const languageDetector = {
   type: 'languageDetector',

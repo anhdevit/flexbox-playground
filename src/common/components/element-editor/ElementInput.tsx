@@ -1,8 +1,9 @@
 import React from 'react';
-import { StyleSheet, TextInput, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import colors from '../../theme/colors';
 import styleCommon from '../../theme/styles';
 import TitleElement from '../texts/TitleElement';
+import { TextInput } from 'react-native-paper'
 
 export interface Props {
   title: string,

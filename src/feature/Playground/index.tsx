@@ -6,34 +6,48 @@
  * @flow
  */
 
-import React from 'react';
-import { View, StyleSheet, TouchableOpacity } from 'react-native';
-import SideBar from '../SideBar';
 import colors from '@common/theme/colors';
+import React from 'react';
+import { StyleSheet } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { connect } from 'react-redux';
+import SideBar from '../SideBar';
+import { ElementConenct } from './Element';
+import { addNode, removeNode } from './playgroundSlice';
 export interface Props {
   navigation: any,
+  dataChildren: {},
+  stylesChildren: {}
 }
 
 const Playground: React.FC<Props> = (props) => {
+  const { dataChildren, stylesChildren } = props;
   return (
-      <KeyboardAwareScrollView bounces={false}>
-        <TouchableOpacity style={styles.rootView}>
-        </TouchableOpacity>
-        <SideBar />
-      </KeyboardAwareScrollView>
+    <KeyboardAwareScrollView>
+      <ElementConenct
+        id={'root'}
+        dataChildren={dataChildren}
+        indexElement={'root'}
+        style={stylesChildren['root']} 
+      />
+      <SideBar />
+    </KeyboardAwareScrollView>
   );
 }
 
-export default Playground;
+const mapStateToProps = (state, ownProps) => {
+  return ({
+    dataChildren: state.playground.dataChildren,
+    stylesChildren: state.playground.stylesChildren
+  })
+}
 
-const styles = StyleSheet.create({
-  rootView: {
-    borderWidth: 2,
-    borderColor: colors.primary,
-    backgroundColor: colors.background,
-    width: '100%',
-    aspectRatio: 1,
-  },
-});
+const mapDispatch = {
+  addNode,
+  removeNode
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatch
+)(Playground);

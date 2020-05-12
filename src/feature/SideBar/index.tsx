@@ -6,33 +6,64 @@
  * @flow
  */
 
-import React from 'react';
+import colors from '@common/theme/colors';
 import TabEditor from '@router/TabEditor';
+import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Button } from 'react-native-paper';
-import colors from '@common/theme/colors';
-import { heightPercentageToDP as hp, widthPercentageToDP as wp } from 'react-native-responsive-screen';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import { connect } from 'react-redux';
+import { addNode, removeNode } from '../Playground/playgroundSlice';
+
 export interface Props {
+  addNode: Function,
+  removeNode: Function
 }
 
 const SideBar: React.FC<Props> = (props) => {
+  const { addNode, removeNode } = props;
+
   return (
     <View style={styles.container}>
       <TabEditor />
-        <View style={styles.footer}>
-          <Button icon="plus" mode="contained" onPress={() => console.log('Pressed')}>
-            add child node
+      <View style={styles.footer}>
+        <Button icon="plus" mode="contained" onPress={() => addNode()}>
+          add child node
         </Button>
-          <Button icon="minus" mode="contained" onPress={() => console.log('Pressed')}>
-            remove node
+        <Button
+          icon="minus"
+          mode="contained"
+          onPress={() => removeNode()}
+          style={{
+            backgroundColor: 'gray'
+          }}
+          labelStyle={{
+            color: 'white'
+          }}
+          color={'red'}
+        >
+          remove node
         </Button>
-        </View>
+      </View>
     </View>
   );
 }
 
-export default SideBar;
+const mapStateToProps = (state, ownProps) => {
+  return ({
+    elementIsSelect: state.playground.elementIsSelect,
+    dataChildren: state.playground.dataChildren,
+  })
+}
+
+const mapDispatch = {
+  addNode,
+  removeNode
+}
+export default connect(
+  mapStateToProps,
+  mapDispatch
+)(SideBar);
 
 const styles = StyleSheet.create({
   container: {
