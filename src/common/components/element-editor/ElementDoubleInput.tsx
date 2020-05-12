@@ -2,11 +2,11 @@ import React from 'react';
 import {
   StyleSheet,
   View,
-  TextInput
 } from 'react-native';
 import colors from '../../theme/colors';
 import TitleElement from '../texts/TitleElement';
 import styleCommon from '../../theme/styles';
+import {TextInput} from 'react-native-paper'
 
 export interface Props {
   navigation?: any,
