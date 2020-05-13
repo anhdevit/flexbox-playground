@@ -9,7 +9,7 @@
 import colors from '@common/theme/colors';
 import TabEditor from '@router/TabEditor';
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, SafeAreaView } from 'react-native';
 import { Button } from 'react-native-paper';
 import { heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { connect } from 'react-redux';
