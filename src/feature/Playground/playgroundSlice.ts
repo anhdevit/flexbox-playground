@@ -10,13 +10,6 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     flexDirection: 'row'
   }, 
-  secondStyleNewElement: {
-    maxWidth:50,
-    maxHeight:50,
-    flex: 1,
-    borderWidth: 1,
-    flexDirection: 'row'
-  }, 
   root: {
       borderWidth: 1,
       backgroundColor: colors.background,
@@ -30,18 +23,20 @@ const playgroundSlice = createSlice({
   name: 'playground',
   initialState: {
     dataChildren: {
-      root: ['1','2', '3'],
-      '1': ['1.1'],
-      '2': [],
-      '3': [],
-      '1.1': []
+      root: ['0.1','0.2', '0.3'],
+      '0.1': ['1.1', '1.2'],
+      '0.2': [],
+      '0.3': [],
+      '1.1': [],
+      '1.2': []
     },
     stylesChildren: {
       'root': styles.root,
-      '1': styles.styleNewElement,
-      '2': styles.styleNewElement,
-      '3': styles.styleNewElement,
-      '1.1': styles.secondStyleNewElement,
+      '0.1': styles.styleNewElement,
+      '0.2': styles.styleNewElement,
+      '0.3': styles.styleNewElement,
+      '1.1': styles.styleNewElement,
+      '1.2': styles.styleNewElement,
     },
     elementIsSelect: 'root',
   },
@@ -49,6 +44,17 @@ const playgroundSlice = createSlice({
     setChildren(state, action) {
       state.children = action.payload
     },
+    // removeNode(state, action) {
+    //   const lastItem = state.dataChildren[state.dataChildren.length - 1]
+    //   state.dataChildren.pop()
+    //   delete state.stylesChildren[lastItem]
+    // },
+    // addNode(state, action) {
+    //   const lastItem = state.dataChildren[state.dataChildren.length - 1]
+    //   state.dataChildren.push(lastItem + 1)
+    //   state.stylesChildren[lastItem + 1] = styles.styleNewElement
+    //   // state.dataChildren[]
+    // },
     removeNode(state, action) {
       const lastItem = state.dataChildren[state.dataChildren.length - 1]
       state.dataChildren.pop()
@@ -74,7 +80,7 @@ const playgroundSlice = createSlice({
         const { id } = action.payload;
         state.elementIsSelect = id
       },
-      prepare(id) {
+      prepare(indexInArray, keyInDataChild, id) {
         return {
           payload: { id }
         }
