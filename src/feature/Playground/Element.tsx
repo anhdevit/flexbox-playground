@@ -16,12 +16,13 @@ export interface Props {
   navigation: any,
   stylesChildren: Object,
   keyParent: string,
-  elementIsSelect: string,
+  elementIsSelect: Object,
   selectElement: Function,
   dataChildren: Object,
   dataElement: string,
-  indexElement: Object,
-  style: Object
+  indexElement: any,
+  style: Object,
+  currentKey: string,
 }
 
 const Element: React.FC<Props> = (props) => {
@@ -50,14 +51,14 @@ const Element: React.FC<Props> = (props) => {
       <View
         style={styles.container}
       >
-        <Text>{currentKey}</Text>
+        <Text>{indexElement === 'root' ? 'root' : (indexElement + 1) }</Text>
       </View>
       {
         typeof dataElement === 'object' && dataElement.map((item, index) => {
           console.log("dataChildren[indexElement][index]", item)
           return <ElementConenct
             key={index}
-            keyParent={keyParent}
+            keyParent={currentKey}
             currentKey={item}
             indexElement={index}
             dataElement={dataChildren[item]}

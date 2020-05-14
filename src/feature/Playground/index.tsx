@@ -26,7 +26,7 @@ const Playground: React.FC<Props> = (props) => {
       <ElementConenct
         keyParent={keyParent}
         dataElement={dataChildren[keyParent]}
-        indexElement={null}
+        indexElement={'root'}
         currentKey={keyParent}
         style={stylesChildren[keyParent]} 
       />
