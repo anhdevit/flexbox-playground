@@ -10,6 +10,13 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     flexDirection: 'row'
   }, 
+  secondStyleNewElement: {
+    maxWidth:50,
+    maxHeight:50,
+    flex: 1,
+    borderWidth: 1,
+    flexDirection: 'row'
+  }, 
   root: {
       borderWidth: 1,
       backgroundColor: colors.background,
@@ -22,11 +29,19 @@ export const styles = StyleSheet.create({
 const playgroundSlice = createSlice({
   name: 'playground',
   initialState: {
-    dataChildren: [1, 2],
+    dataChildren: {
+      root: ['1','2', '3'],
+      '1': ['1.1'],
+      '2': [],
+      '3': [],
+      '1.1': []
+    },
     stylesChildren: {
       'root': styles.root,
-      1: styles.styleNewElement,
-      2: styles.styleNewElement,
+      '1': styles.styleNewElement,
+      '2': styles.styleNewElement,
+      '3': styles.styleNewElement,
+      '1.1': styles.secondStyleNewElement,
     },
     elementIsSelect: 'root',
   },

@@ -26,7 +26,7 @@ const Playground: React.FC<Props> = (props) => {
     <KeyboardAwareScrollView>
       <ElementConenct
         id={'root'}
-        dataChildren={dataChildren}
+        data={dataChildren['root']}
         indexElement={'root'}
         style={stylesChildren['root']} 
       />

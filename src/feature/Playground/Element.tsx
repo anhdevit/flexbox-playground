@@ -30,13 +30,11 @@ const Element: React.FC<Props> = (props) => {
     elementIsSelect,
     selectElement,
     dataChildren,
-    indexElement,
+    data,
     style
   } = props
   console.log("props", props)
   console.log("id", id)
-
-  console.log("elementIsSelect", elementIsSelect)
 
   return (
     <TouchableOpacity
@@ -49,16 +47,15 @@ const Element: React.FC<Props> = (props) => {
         <Text>{id}</Text>
       </View>
       {
-        typeof dataChildren === 'object' ? dataChildren.map((item, index) => {
+        typeof data === 'object' && data.map((item, index) => {
           console.log("dataChildren[indexElement][index]", item)
           return <ElementConenct
             key={index}
             id={item}
-            dataChildren={dataChildren[item]}
+            data={dataChildren[item]}
             style={stylesChildren[item]}
           />
-          return null
-        }) : null
+        })
       }
     </TouchableOpacity>
   );
@@ -75,7 +72,8 @@ const styles = StyleSheet.create({
 const mapStateToProps = (state, ownProps) => {
   return ({
     stylesChildren: state.playground.stylesChildren,
-    elementIsSelect: state.playground.elementIsSelect
+    elementIsSelect: state.playground.elementIsSelect,
+    dataChildren: state.playground.dataChildren,
   })
 }
 
