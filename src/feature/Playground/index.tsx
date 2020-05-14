@@ -6,9 +6,7 @@
  * @flow
  */
 
-import colors from '@common/theme/colors';
 import React from 'react';
-import { StyleSheet } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { connect } from 'react-redux';
 import SideBar from '../SideBar';
@@ -22,13 +20,15 @@ export interface Props {
 
 const Playground: React.FC<Props> = (props) => {
   const { dataChildren, stylesChildren } = props;
+  const keyParent = 'root'
   return (
     <KeyboardAwareScrollView>
       <ElementConenct
-        id={'root'}
-        data={dataChildren['root']}
-        indexElement={'root'}
-        style={stylesChildren['root']} 
+        keyParent={keyParent}
+        dataElement={dataChildren[keyParent]}
+        indexElement={null}
+        currentKey={keyParent}
+        style={stylesChildren[keyParent]} 
       />
       <SideBar />
     </KeyboardAwareScrollView>

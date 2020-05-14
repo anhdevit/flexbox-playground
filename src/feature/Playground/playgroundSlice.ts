@@ -23,7 +23,7 @@ const playgroundSlice = createSlice({
   name: 'playground',
   initialState: {
     dataChildren: {
-      root: ['0.1','0.2', '0.3'],
+      'root': ['0.1','0.2', '0.3'],
       '0.1': ['1.1', '1.2'],
       '0.2': [],
       '0.3': [],
@@ -38,7 +38,11 @@ const playgroundSlice = createSlice({
       '1.1': styles.styleNewElement,
       '1.2': styles.styleNewElement,
     },
-    elementIsSelect: 'root',
+    elementIsSelect: {
+      parent: 'root',
+      index: null,
+      currentKey: 'root'
+    },
   },
   reducers: {
     setChildren(state, action) {
@@ -77,12 +81,12 @@ const playgroundSlice = createSlice({
     },
     selectElement: {
       reducer(state, action) {
-        const { id } = action.payload;
-        state.elementIsSelect = id
+        const { parent, index, currentKey } = action.payload;
+        state.elementIsSelect = { parent, index, currentKey }
       },
-      prepare(indexInArray, keyInDataChild, id) {
+      prepare(parent, index, currentKey) {
         return {
-          payload: { id }
+          payload: { parent, index, currentKey }
         }
       }
     }

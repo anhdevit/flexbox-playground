@@ -15,44 +15,52 @@ import colors from '@common/theme/colors';
 export interface Props {
   navigation: any,
   stylesChildren: Object,
-  id: string,
+  keyParent: string,
   elementIsSelect: string,
   selectElement: Function,
   dataChildren: Object,
-  indexElement: string,
+  dataElement: string,
+  indexElement: Object,
   style: Object
 }
 
 const Element: React.FC<Props> = (props) => {
   const {
     stylesChildren,
-    id,
+    keyParent,
     elementIsSelect,
     selectElement,
     dataChildren,
-    data,
-    style
+    dataElement,
+    style,
+    indexElement,
+    currentKey
   } = props
   console.log("props", props)
-  console.log("id", id)
+  console.log("dataElement", dataElement)
+  console.log("keyParent", keyParent)
+  console.log("indexElement", indexElement)
+  console.log("currentKey", currentKey)
 
   return (
     <TouchableOpacity
-      style={[style, { borderColor: elementIsSelect === id.toString() ? colors.primary : 'gray' }]}
-      onPress={() => selectElement(id.toString())}
+      style={[style, { borderColor: elementIsSelect.currentKey === currentKey ? colors.primary : 'gray' }]}
+      onPress={() => selectElement(keyParent, indexElement, currentKey)}
     >
       <View
         style={styles.container}
       >
-        <Text>{id}</Text>
+        <Text>{keyParent}</Text>
       </View>
       {
-        typeof data === 'object' && data.map((item, index) => {
+        typeof dataElement === 'object' && dataElement.map((item, index) => {
           console.log("dataChildren[indexElement][index]", item)
           return <ElementConenct
             key={index}
-            id={item}
-            data={dataChildren[item]}
+            keyParent={keyParent}
+            currentKey={item}
+            indexElement={index}
+            dataElement={dataChildren[item]}
             style={stylesChildren[item]}
           />
         })
