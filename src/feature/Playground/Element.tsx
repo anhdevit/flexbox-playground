@@ -50,7 +50,7 @@ const Element: React.FC<Props> = (props) => {
       <View
         style={styles.container}
       >
-        <Text>{keyParent}</Text>
+        <Text>{currentKey}</Text>
       </View>
       {
         typeof dataElement === 'object' && dataElement.map((item, index) => {
