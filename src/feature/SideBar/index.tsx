@@ -9,7 +9,7 @@
 import colors from '@common/theme/colors';
 import TabEditor from '@router/TabEditor';
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, SafeAreaView } from 'react-native';
 import { Button } from 'react-native-paper';
 import { heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { connect } from 'react-redux';
@@ -17,7 +17,7 @@ import { addNode, removeNode } from '../Playground/playgroundSlice';
 
 export interface Props {
   addNode: Function,
-  removeNode: Function
+  removeNode: Function,
 }
 
 const SideBar: React.FC<Props> = (props) => {
@@ -58,7 +58,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatch = {
   addNode,
-  removeNode
+  removeNode,
 }
 export default connect(
   mapStateToProps,

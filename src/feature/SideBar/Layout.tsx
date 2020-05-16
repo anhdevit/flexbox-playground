@@ -38,8 +38,8 @@ const Layout: React.FC<Props> = (props) => {
     <ScrollView style={stylesCommon.viewEditor}>
     <ElementDoubleInput
       title={`${width.title} x ${height.title}`}
-      defaultValueLeft={width.defaultValue.toString()}
-      defaultValueRight={height.defaultValue.toString()}
+      nameField1={'width'}
+      nameField2={'height'}
       style={[stylesCommon.elementEditor]}
     />
     <ElementDoubleInput
@@ -100,4 +100,4 @@ const Layout: React.FC<Props> = (props) => {
   );
 }
 
-export default Layout;
+export default Layout

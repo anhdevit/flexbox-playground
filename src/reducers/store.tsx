@@ -1,25 +1,18 @@
 
 import AsyncStorage from '@react-native-community/async-storage';
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
-import {
-  persistStore,
-  persistReducer,
-  // FLUSH,
-  // REHYDRATE,
-  // PAUSE,
-  // PERSIST,
-  // PURGE,
-  // REGISTER
-} from "redux-persist";
-import rootReducer from './';
-import { ThunkAction } from 'redux-thunk'
+import { persistReducer, persistStore } from "redux-persist";
+import { rootReducer } from './';
+import { useDispatch } from 'react-redux';
 
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
-  whitelist: ['',], //Things u want to persist
+  whitelist: [], //Things u want to persist
   blacklist: ['form'], //Things u dont
 }
+
+export type RootState = ReturnType<typeof rootReducer>
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 
@@ -31,5 +24,8 @@ export const store = configureStore({
     }
   })
 })
+
+export type AppDispacth = typeof store.dispatch
+export const useAppDispatch = () => useDispatch<AppDispacth>(); // Export a hook that can be resused to resolve types
 
 export let persistor = persistStore(store)
