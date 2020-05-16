@@ -6,18 +6,14 @@
  * @flow strict-local
  */
 
-import React from 'react';
-import AppContainer from './src/router/AppContainer';
 import i18next from 'i18next';
+import React from 'react';
 import { initReactI18next } from 'react-i18next';
 import { configureFonts, DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 import { Provider } from 'react-redux';
-import { configureStore } from '@reduxjs/toolkit';
-import rootReducer from './src/reducers'
-import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { store, persistor } from './src/reducers/store';
-import { PersistGate } from 'redux-persist/integration/react'
-import { SafeAreaView } from 'react-native'
+import { PersistGate } from 'redux-persist/integration/react';
+import { persistor, store } from './src/reducers/store';
+import AppContainer from './src/router/AppContainer';
 
 const languageDetector = {
   type: 'languageDetector',
