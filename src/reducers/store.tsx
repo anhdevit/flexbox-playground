@@ -8,9 +8,11 @@ import { useDispatch } from 'react-redux';
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
-  whitelist: ['',], //Things u want to persist
+  whitelist: [], //Things u want to persist
   blacklist: ['form'], //Things u dont
 }
+
+export type RootState = ReturnType<typeof rootReducer>
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 

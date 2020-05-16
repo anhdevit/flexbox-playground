@@ -17,7 +17,7 @@ import { addNode, removeNode } from '../Playground/playgroundSlice';
 
 export interface Props {
   addNode: Function,
-  removeNode: Function
+  removeNode: Function,
 }
 
 const SideBar: React.FC<Props> = (props) => {
@@ -58,7 +58,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatch = {
   addNode,
-  removeNode
+  removeNode,
 }
 export default connect(
   mapStateToProps,

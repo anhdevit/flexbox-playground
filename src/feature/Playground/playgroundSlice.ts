@@ -1,21 +1,27 @@
-import { createSlice, createAction } from '@reduxjs/toolkit';
+import { createSlice, createAction, PayloadAction } from '@reduxjs/toolkit';
 import colors from '@common/theme/colors';
-import {StyleSheet} from 'react-native'
+import { StyleSheet } from 'react-native'
+
+interface ElementSelected {
+  parent: string,
+  index: any,
+  currentKey: string,
+}
 
 export const styles = StyleSheet.create({
   styleNewElement: {
-    maxWidth:100,
-    maxHeight:100,
+    maxWidth: 100,
+    maxHeight: 100,
     flex: 1,
     borderWidth: 1,
     flexDirection: 'row'
-  }, 
+  },
   root: {
-      borderWidth: 1,
-      backgroundColor: colors.background,
-      width: '100%',
-      aspectRatio: 1,
-      flexDirection: 'row'
+    borderWidth: 1,
+    backgroundColor: colors.background,
+    width: '100%',
+    aspectRatio: 1,
+    flexDirection: 'row'
   }
 })
 
@@ -23,7 +29,7 @@ const playgroundSlice = createSlice({
   name: 'playground',
   initialState: {
     dataChildren: {
-      'root': ['0,1','0,2', '0,3'],
+      'root': ['0,1', '0,2', '0,3'],
       '0,1': ['1,1', '1,2'],
       '0,2': [],
       '0,3': [],
@@ -45,31 +51,25 @@ const playgroundSlice = createSlice({
     },
   },
   reducers: {
-    setChildren(state, action) {
-      state.children = action.payload
-    },
     removeNode(state, action) {
-      const {parent, index, currentKey} = state.elementIsSelect;
-   
-      // console.log("removeNode -> parent", parent)
+      console.log("removeNode -> action", action.payload)
+      const { parent, index, currentKey } = state.elementIsSelect;
+      console.log("removeNode -> index", index)
+
+      //Remove key in parent with index
+      state.dataChildren[parent].splice(index, 1)
 
       //Remove key in datachildren
-      // delete state.dataChildren[currentKey]
+      delete state.dataChildren[currentKey]
 
       //Remove style
-      // delete state.stylesChildren[currentKey]
-      
-      //Remove key in parent with index
-      // state.dataChildren[parent].splice(index)
-      const {dataChildren} =  state
-      const {root} =  dataChildren
-      console.log("removeNode -> dataChildren", root)
+      delete state.stylesChildren[currentKey]
 
-      console.log("removeNode -> state.dataChildren[parent]", state)
-      // console.log("removeNode -> state.dataChildren[parent]", state.dataChildren[parent])
+
+      const { dataChildren } = state
     },
     addNode(state, action) {
-      const {parent, index, currentKey} = state.elementIsSelect;
+      const { parent, index, currentKey } = state.elementIsSelect;
 
       //Add new item in array selected
       // if ()
@@ -79,26 +79,15 @@ const playgroundSlice = createSlice({
       const dataParent = state.dataChildren[parent]
       const lastItem = dataParent[dataParent.length - 1]
       const arrayWithLastItem = lastItem.split(',')
-      arrayWithLastItem.splice(arrayWithLastItem.length - 1, 1,parseInt(arrayWithLastItem[arrayWithLastItem.length - 1]) + 1)
+      arrayWithLastItem.splice(arrayWithLastItem.length - 1, 1, parseInt(arrayWithLastItem[arrayWithLastItem.length - 1]) + 1)
       state.dataChildren[parent].push(arrayWithLastItem)
-      
+
       //Add new style
       state.stylesChildren[arrayWithLastItem] = styles.styleNewElement
 
       //Set array with new children 
       state.dataChildren[arrayWithLastItem] = []
     },
-    // removeNode(state, action) {
-    //   const lastItem = state.dataChildren[state.dataChildren.length - 1]
-    //   state.dataChildren.pop()
-    //   delete state.stylesChildren[lastItem]
-    // },
-    // addNode(state, action) {
-    //   const lastItem = state.dataChildren[state.dataChildren.length - 1]
-    //   state.dataChildren.push(lastItem + 1)
-    //   state.stylesChildren[lastItem + 1] = styles.styleNewElement
-    //   // state.dataChildren[]
-    // },
     setStyleChildren: {
       reducer(state, action) {
         const { id, style } = action.payload;
@@ -109,7 +98,7 @@ const playgroundSlice = createSlice({
       }
     },
     selectElement: {
-      reducer(state, action) {
+      reducer(state, action: PayloadAction<ElementSelected>) {
         const { parent, index, currentKey } = action.payload;
         state.elementIsSelect = { parent, index, currentKey }
       },
@@ -122,9 +111,7 @@ const playgroundSlice = createSlice({
   }
 })
 
-
-
-export const { setStyleChildren, setChildren, selectElement, addNode, removeNode } = playgroundSlice.actions
+export const { setStyleChildren, selectElement, addNode, removeNode } = playgroundSlice.actions
 
 export default playgroundSlice.reducer
 

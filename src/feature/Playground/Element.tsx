@@ -6,11 +6,11 @@
  * @flow
  */
 
-import React from 'react';
-import { TouchableOpacity, View, Text, StyleSheet } from 'react-native';
-import { connect } from 'react-redux';
-import { setChildren, selectElement } from './playgroundSlice';
 import colors from '@common/theme/colors';
+import React from 'react';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { connect } from 'react-redux';
+import { selectElement } from './playgroundSlice';
 
 export interface Props {
   navigation: any,
@@ -87,7 +87,6 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatch = {
-  setChildren,
   selectElement
 }
 
