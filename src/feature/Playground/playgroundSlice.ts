@@ -1,6 +1,12 @@
-import { createSlice, createAction } from '@reduxjs/toolkit';
+import { createSlice, createAction, PayloadAction } from '@reduxjs/toolkit';
 import colors from '@common/theme/colors';
 import {StyleSheet} from 'react-native'
+
+interface ElementSelected {
+  parent: string, 
+  index: any, 
+  currentKey: string,
+}
 
 export const styles = StyleSheet.create({
   styleNewElement: {
@@ -45,9 +51,6 @@ const playgroundSlice = createSlice({
     },
   },
   reducers: {
-    setChildren(state, action) {
-      state.children = action.payload
-    },
     removeNode(state, action) {
       const {parent, index, currentKey} = state.elementIsSelect;
    
@@ -62,10 +65,10 @@ const playgroundSlice = createSlice({
       //Remove key in parent with index
       // state.dataChildren[parent].splice(index)
       const {dataChildren} =  state
-      const {root} =  dataChildren
-      console.log("removeNode -> dataChildren", root)
+      // const {root} =  dataChildren
+      // console.log("removeNode -> dataChildren", root)
 
-      console.log("removeNode -> state.dataChildren[parent]", state)
+      // console.log("removeNode -> state.dataChildren[parent]",  state.dataChildren[parent])
       // console.log("removeNode -> state.dataChildren[parent]", state.dataChildren[parent])
     },
     addNode(state, action) {
@@ -109,7 +112,7 @@ const playgroundSlice = createSlice({
       }
     },
     selectElement: {
-      reducer(state, action) {
+      reducer(state, action: PayloadAction<ElementSelected>) {
         const { parent, index, currentKey } = action.payload;
         state.elementIsSelect = { parent, index, currentKey }
       },
@@ -124,7 +127,7 @@ const playgroundSlice = createSlice({
 
 
 
-export const { setStyleChildren, setChildren, selectElement, addNode, removeNode } = playgroundSlice.actions
+export const { setStyleChildren, selectElement, addNode, removeNode } = playgroundSlice.actions
 
 export default playgroundSlice.reducer
 
