@@ -88,17 +88,6 @@ const playgroundSlice = createSlice({
       //Set array with new children 
       state.dataChildren[arrayWithLastItem] = []
     },
-    // removeNode(state, action) {
-    //   const lastItem = state.dataChildren[state.dataChildren.length - 1]
-    //   state.dataChildren.pop()
-    //   delete state.stylesChildren[lastItem]
-    // },
-    // addNode(state, action) {
-    //   const lastItem = state.dataChildren[state.dataChildren.length - 1]
-    //   state.dataChildren.push(lastItem + 1)
-    //   state.stylesChildren[lastItem + 1] = styles.styleNewElement
-    //   // state.dataChildren[]
-    // },
     setStyleChildren: {
       reducer(state, action) {
         const { id, style } = action.payload;
@@ -121,8 +110,6 @@ const playgroundSlice = createSlice({
     }
   }
 })
-
-
 
 export const { setStyleChildren, selectElement, addNode, removeNode } = playgroundSlice.actions
 
