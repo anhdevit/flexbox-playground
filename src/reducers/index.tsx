@@ -6,5 +6,3 @@ export const rootReducer = combineReducers({
   playground: playgroundSlice,
   form: formReducer,
 })
-
-export type RootState = ReturnType<typeof rootReducer>

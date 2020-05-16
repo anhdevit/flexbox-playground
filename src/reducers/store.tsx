@@ -8,19 +8,19 @@ import { useDispatch } from 'react-redux';
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
-  whitelist: ['',], //Things u want to persist
+  whitelist: ['playground',], //Things u want to persist
   blacklist: ['form'], //Things u dont
 }
+
+export type RootState = ReturnType<typeof rootReducer>
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 export const store = configureStore({
   reducer: persistedReducer,
-  middleware: getDefaultMiddleware({
-    serializableCheck: false,
-    thunk: {
-    }
-  })
+  middleware:[
+    ...getDefaultMiddleware<RootState>()
+  ] 
 })
 
 export type AppDispacth = typeof store.dispatch
