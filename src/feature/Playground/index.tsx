@@ -14,8 +14,8 @@ import { ElementConenct } from './Element';
 import { addNode, removeNode } from './playgroundSlice';
 export interface Props {
   navigation: any,
-  dataChildren: {},
-  stylesChildren: {}
+  dataChildren: any,
+  stylesChildren: any
 }
 
 const Playground: React.FC<Props> = (props) => {

@@ -13,7 +13,7 @@ import { StyleSheet, View, SafeAreaView } from 'react-native';
 import { Button } from 'react-native-paper';
 import { heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { connect } from 'react-redux';
-import { addNode, removeNode, incrementBy } from '../Playground/playgroundSlice';
+import { addNode, removeNode } from '../Playground/playgroundSlice';
 
 export interface Props {
   addNode: Function,
@@ -21,7 +21,7 @@ export interface Props {
 }
 
 const SideBar: React.FC<Props> = (props) => {
-  const { addNode, removeNode, incrementBy } = props;
+  const { addNode, removeNode } = props;
 
   return (
     <View style={styles.container}>
@@ -33,7 +33,7 @@ const SideBar: React.FC<Props> = (props) => {
         <Button
           icon="minus"
           mode="contained"
-          onPress={() => incrementBy()}
+          onPress={() => removeNode()}
           style={{
             backgroundColor: 'gray'
           }}
