@@ -52,10 +52,11 @@ const playgroundSlice = createSlice({
   },
   reducers: {
     removeNode(state, action) {
-      console.log("removeNode -> action", action.payload)
       const { parent, index, currentKey } = state.elementIsSelect;
-      console.log("removeNode -> index", index)
 
+      if (currentKey === 'root') {
+        return
+      }
       //Remove key in parent with index
       state.dataChildren[parent].splice(index, 1)
 
@@ -64,9 +65,6 @@ const playgroundSlice = createSlice({
 
       //Remove style
       delete state.stylesChildren[currentKey]
-
-
-      const { dataChildren } = state
     },
     addNode(state, action) {
       const { parent, index, currentKey } = state.elementIsSelect;
@@ -78,15 +76,17 @@ const playgroundSlice = createSlice({
       //Add new item to array
       const dataParent = state.dataChildren[parent]
       const lastItem = dataParent[dataParent.length - 1]
+      console.log("addNode -> lastItem", lastItem)
       const arrayWithLastItem = lastItem.split(',')
-      arrayWithLastItem.splice(arrayWithLastItem.length - 1, 1, parseInt(arrayWithLastItem[arrayWithLastItem.length - 1]) + 1)
-      state.dataChildren[parent].push(arrayWithLastItem)
+      console.log("addNode -> arrayWithLastItem", arrayWithLastItem)
+      arrayWithLastItem.splice(arrayWithLastItem.length - 1, 1, (parseInt(arrayWithLastItem[arrayWithLastItem.length - 1]) + 1).toString())
+      state.dataChildren[parent].push(arrayWithLastItem.toString())
 
-      //Add new style
-      state.stylesChildren[arrayWithLastItem] = styles.styleNewElement
+      // //Add new style
+      state.stylesChildren[arrayWithLastItem.toString()] = styles.styleNewElement
 
-      //Set array with new children 
-      state.dataChildren[arrayWithLastItem] = []
+      // //Set array with new children 
+      state.dataChildren[arrayWithLastItem.toString()] = []
     },
     setStyleChildren: {
       reducer(state, action) {
