@@ -67,18 +67,12 @@ const playgroundSlice = createSlice({
       delete state.stylesChildren[currentKey]
     },
     addNode(state, action) {
-      const { parent, index, currentKey } = state.elementIsSelect;
-
-      //Add new item in array selected
-      // if ()
-      // state.dataChildren[currentKey].push()
+      const { parent } = state.elementIsSelect;
 
       //Add new item to array
       const dataParent = state.dataChildren[parent]
       const lastItem = dataParent[dataParent.length - 1]
-      console.log("addNode -> lastItem", lastItem)
       const arrayWithLastItem = lastItem.split(',')
-      console.log("addNode -> arrayWithLastItem", arrayWithLastItem)
       arrayWithLastItem.splice(arrayWithLastItem.length - 1, 1, (parseInt(arrayWithLastItem[arrayWithLastItem.length - 1]) + 1).toString())
       state.dataChildren[parent].push(arrayWithLastItem.toString())
 
