@@ -15,6 +15,7 @@ import { heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { connect } from 'react-redux';
 import { addNode, removeNode } from '../Playground/playgroundSlice';
 
+// Style for element
 export interface Props {
   addNode: Function,
   removeNode: Function,
